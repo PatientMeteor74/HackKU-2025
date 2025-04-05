@@ -2,7 +2,7 @@ import numpy as np
 import pandas as pd
 import json, glob
 import matplotlib.pyplot as plt
-from sklearn.tree import DecisionTreeClassifier
+from sklearn.tree import DecisionTreeClassifier, DecisionTreeRegressor
 from sklearn.ensemble import RandomForestClassifier, RandomForestRegressor
 from sklearn.model_selection import train_test_split
 from sklearn.metrics import accuracy_score, f1_score, mean_squared_error, r2_score
@@ -200,16 +200,16 @@ sleep_data['sleep_duration_trend'] = sleep_data.groupby('uid')['sleep_duration']
 # Load and process PHQ-9 survey data
 phq9_data = pd.read_csv(path + 'survey/PHQ-9.csv')
 phq9_mapping = {
-    'Not at all': 0,
-    'Several days': 1,
-    'More than half the days': 2,
-    'Nearly every day': 3
+    'Not at all': 3,
+    'Several days': 2,
+    'More than half the days': 1,
+    'Nearly every day': 0
 }
 phq9_response_mapping = {
-    'Not difficult at all': 0,
-    'Somewhat difficult': 1,
-    'Very difficult': 2,
-    'Extremely difficult': 3
+    'Not difficult at all': 3,
+    'Somewhat difficult': 2,
+    'Very difficult': 1,
+    'Extremely difficult': 0
 }
 
 # Apply the mapping to each column
@@ -309,7 +309,7 @@ X = merged_data[features].fillna(0)
 y = merged_data['mood_improvement'].fillna(0)
 
 # Split data
-X_train, X_test, y_train, y_test = train_test_split(X, y, test_size=0.2, random_state=42)
+X_train, X_test, y_train, y_test = train_test_split(X, y, test_size=0.1, random_state=42)
 
 # Scale features
 scaler = StandardScaler()
@@ -317,7 +317,7 @@ X_train_scaled = scaler.fit_transform(X_train)
 X_test_scaled = scaler.transform(X_test)
 
 # Train model
-model = RandomForestRegressor(n_estimators=300, max_depth=7)
+model = LinearRegression()
 model.fit(X_train_scaled, y_train)
 
 # Evaluate model
@@ -328,10 +328,10 @@ test_score = r2_score(y_test, y_test_pred)
 train_rmse = np.sqrt(mean_squared_error(y_train, y_train_pred))
 test_rmse = np.sqrt(mean_squared_error(y_test, y_test_pred))
 
-print(f"Training R^2 score: {train_score:.4f}")
-print(f"Testing R^2 score: {test_score:.4f}")
-print(f"Training RMSE: {train_rmse:.4f}")
-print(f"Testing RMSE: {test_rmse:.4f}")
+print(f"Training R^2 score: {train_score}")
+print(f"Testing R^2 score: {test_score}")
+print(f"Training RMSE: {train_rmse}")
+print(f"Testing RMSE: {test_rmse}")
 
 # Save model and scaler
 joblib.dump(model, 'mood_prediction_model.joblib')
