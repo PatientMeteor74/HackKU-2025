@@ -1,0 +1,95 @@
+[
+    {
+        "null": "3",
+        "resp_time": 1364424837
+    },
+    {
+        "null": "2",
+        "resp_time": 1364430591
+    },
+    {
+        "null": "null",
+        "resp_time": 1364418571
+    },
+    {
+        "null": "1",
+        "resp_time": 1364548414
+    },
+    {
+        "null": "2",
+        "resp_time": 1364590990
+    },
+    {
+        "null": "1",
+        "resp_time": 1364672001
+    },
+    {
+        "null": "5",
+        "resp_time": 1364806083
+    },
+    {
+        "null": "3",
+        "resp_time": 1365024688
+    },
+    {
+        "null": "5",
+        "resp_time": 1364865919
+    },
+    {
+        "null": "4",
+        "resp_time": 1365372370
+    },
+    {
+        "anxious": "3",
+        "calm": "4",
+        "conventional": "null",
+        "critical": "3",
+        "dependable": "3",
+        "disorganized": "4",
+        "enthusiastic": "2",
+        "experiences": "2",
+        "reserved": "4",
+        "resp_time": 1365886675,
+        "sympathetic": "3"
+    },
+    {
+        "anxious": "2",
+        "calm": "4",
+        "conventional": "3",
+        "critical": "2",
+        "dependable": "4",
+        "disorganized": "4",
+        "enthusiastic": "2",
+        "experiences": "3",
+        "reserved": "1",
+        "resp_time": 1365754430,
+        "sympathetic": "2"
+    },
+    {
+        "anxious": "4",
+        "calm": "2",
+        "conventional": "2",
+        "critical": "4",
+        "dependable": "1",
+        "disorganized": "5",
+        "enthusiastic": "2",
+        "experiences": "2",
+        "reserved": "2",
+        "resp_time": 1365930786,
+        "sympathetic": "4"
+    },
+    {
+        "anxious": "2",
+        "calm": "null",
+        "conventional": "null",
+        "critical": "1",
+        "dependable": "3",
+        "disorganized": "null",
+        "enthusiastic": "1",
+        "experiences": "3",
+        "location": "43.70610596,-72.29091217",
+        "reserved": "2",
+        "resp_time": 1368751701,
+        "sympathetic": "2"
+    }
+]

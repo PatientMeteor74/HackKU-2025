@@ -1,0 +1,76 @@
+[
+    {
+        "null": "4",
+        "resp_time": 1364450526
+    },
+    {
+        "null": "5",
+        "resp_time": 1364751066
+    },
+    {
+        "null": "5",
+        "resp_time": 1364781918
+    },
+    {
+        "null": "2",
+        "resp_time": 1364857987
+    },
+    {
+        "critical": "4",
+        "dependable": "4",
+        "enthusiastic": "1",
+        "resp_time": 1365663495
+    },
+    {
+        "anxious": "2",
+        "calm": "null",
+        "conventional": "null",
+        "critical": "3",
+        "dependable": "4",
+        "disorganized": "null",
+        "enthusiastic": "3",
+        "experiences": "3",
+        "reserved": "3",
+        "resp_time": 1366145308,
+        "sympathetic": "3"
+    },
+    {
+        "anxious": "3",
+        "calm": "3",
+        "conventional": "3",
+        "critical": "2",
+        "dependable": "5",
+        "disorganized": "4",
+        "enthusiastic": "3",
+        "experiences": "2",
+        "reserved": "3",
+        "resp_time": 1365788931,
+        "sympathetic": "2"
+    },
+    {
+        "anxious": "3",
+        "calm": "3",
+        "conventional": "3",
+        "critical": "1",
+        "dependable": "5",
+        "disorganized": "3",
+        "enthusiastic": "3",
+        "experiences": "2",
+        "reserved": "3",
+        "resp_time": 1365891818,
+        "sympathetic": "3"
+    },
+    {
+        "anxious": "3",
+        "calm": "3",
+        "conventional": "3",
+        "critical": "3",
+        "dependable": "4",
+        "disorganized": "4",
+        "enthusiastic": "4",
+        "experiences": "3",
+        "reserved": "5",
+        "resp_time": 1365919361,
+        "sympathetic": "2"
+    }
+]

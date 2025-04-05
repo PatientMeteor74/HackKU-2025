@@ -1,0 +1,170 @@
+[
+    {
+        "Social2": "1",
+        "null": "4",
+        "resp_time": 1364841066
+    },
+    {
+        "Social2": "3",
+        "null": "3",
+        "resp_time": 1364887040
+    },
+    {
+        "Social2": "1",
+        "null": "4",
+        "resp_time": 1365154004
+    },
+    {
+        "other_relaxing": "1",
+        "other_working": "3",
+        "relaxing": "1",
+        "resp_time": 1365448424,
+        "working": "3"
+    },
+    {
+        "other_relaxing": "2",
+        "other_working": "4",
+        "relaxing": "1",
+        "resp_time": 1365580585,
+        "working": "1"
+    },
+    {
+        "other_relaxing": "3",
+        "other_working": "2",
+        "relaxing": "1",
+        "resp_time": 1365673210,
+        "working": "3"
+    },
+    {
+        "other_relaxing": "1",
+        "other_working": "4",
+        "relaxing": "1",
+        "resp_time": 1365756382,
+        "working": "2"
+    },
+    {
+        "other_relaxing": "4",
+        "other_working": "1",
+        "relaxing": "1",
+        "resp_time": 1365923778,
+        "working": "1"
+    },
+    {
+        "other_relaxing": "4",
+        "other_working": "1",
+        "relaxing": "1",
+        "resp_time": 1365838884,
+        "working": "1"
+    },
+    {
+        "other_relaxing": "1",
+        "other_working": "2",
+        "relaxing": "1",
+        "resp_time": 1366005957,
+        "working": "4"
+    },
+    {
+        "location": "null",
+        "other_relaxing": "3",
+        "other_working": "2",
+        "relaxing": "1",
+        "resp_time": 1366318763,
+        "working": "2"
+    },
+    {
+        "location": "43.70587544,-72.2911665",
+        "other_relaxing": "3",
+        "other_working": "2",
+        "relaxing": "1",
+        "resp_time": 1366574417,
+        "working": "2"
+    },
+    {
+        "location": "43.7031993,-72.2904444",
+        "other_relaxing": "1",
+        "other_working": "3",
+        "relaxing": "1",
+        "resp_time": 1366662702,
+        "working": "4"
+    },
+    {
+        "location": "43.70392276,-72.28729666",
+        "other_relaxing": "3",
+        "other_working": "3",
+        "relaxing": "1",
+        "resp_time": 1366838280,
+        "working": "1"
+    },
+    {
+        "location": "43.71796947,-72.27247143",
+        "other_relaxing": "4",
+        "other_working": "1",
+        "relaxing": "1",
+        "resp_time": 1367089225,
+        "working": "1"
+    },
+    {
+        "location": "43.70608389,-72.29104393",
+        "other_relaxing": "4",
+        "other_working": "1",
+        "relaxing": "1",
+        "resp_time": 1366916272,
+        "working": "1"
+    },
+    {
+        "location": "43.70301955,-72.29020739",
+        "other_relaxing": "4",
+        "other_working": "1",
+        "relaxing": "1",
+        "resp_time": 1367173801,
+        "working": "2"
+    },
+    {
+        "location": "43.70374615,-72.29053936",
+        "other_relaxing": "1",
+        "other_working": "3",
+        "relaxing": "1",
+        "resp_time": 1367257924,
+        "working": "4"
+    },
+    {
+        "location": "43.47216071,-71.99885894",
+        "other_relaxing": "4",
+        "other_working": "2",
+        "relaxing": "1",
+        "resp_time": 1367348351,
+        "working": "1"
+    },
+    {
+        "location": "43.70420319,-72.28854729",
+        "other_relaxing": "5",
+        "other_working": "1",
+        "relaxing": "1",
+        "resp_time": 1367798947,
+        "working": "1"
+    },
+    {
+        "location": "43.70582969,-72.29057957",
+        "other_relaxing": "1",
+        "other_working": "4",
+        "relaxing": "1",
+        "resp_time": 1369636147,
+        "working": "3"
+    },
+    {
+        "location": "43.70450738,-72.29025958",
+        "other_relaxing": "2",
+        "other_working": "4",
+        "relaxing": "1",
+        "resp_time": 1369769711,
+        "working": "2"
+    },
+    {
+        "location": "43.71929276,-72.27265728",
+        "other_relaxing": "2",
+        "other_working": "4",
+        "relaxing": "1",
+        "resp_time": 1370066633,
+        "working": "2"
+    }
+]

@@ -1,0 +1,160 @@
+[
+    {
+        "exercise": "3",
+        "have": "1",
+        "resp_time": 1364891724,
+        "schedule": "null",
+        "walk": "2"
+    },
+    {
+        "exercise": "1",
+        "have": "2",
+        "resp_time": 1364954420,
+        "schedule": "1",
+        "walk": "1"
+    },
+    {
+        "exercise": "1",
+        "have": "2",
+        "resp_time": 1365041919,
+        "schedule": "1",
+        "walk": "2"
+    },
+    {
+        "exercise": "1",
+        "have": "2",
+        "resp_time": 1365128481,
+        "schedule": "2",
+        "walk": "1"
+    },
+    {
+        "exercise": "1",
+        "have": "2",
+        "resp_time": 1365217507,
+        "schedule": "2",
+        "walk": "1"
+    },
+    {
+        "exercise": "1",
+        "have": "2",
+        "resp_time": 1365217506,
+        "schedule": "1",
+        "walk": "4"
+    },
+    {
+        "exercise": "1",
+        "have": "2",
+        "resp_time": 1365307004,
+        "schedule": "2",
+        "walk": "1"
+    },
+    {
+        "exercise": "1",
+        "have": "2",
+        "resp_time": 1365441552,
+        "schedule": "2",
+        "walk": "1"
+    },
+    {
+        "exercise": "1",
+        "have": "2",
+        "resp_time": 1365893681,
+        "schedule": "2",
+        "walk": "1"
+    },
+    {
+        "exercise": "1",
+        "have": "2",
+        "resp_time": 1366251527,
+        "schedule": "2",
+        "walk": "1"
+    },
+    {
+        "exercise": "2",
+        "have": "1",
+        "location": "43.70258733,-72.28374163",
+        "resp_time": 1366354616,
+        "schedule": "null",
+        "walk": "2"
+    },
+    {
+        "exercise": "1",
+        "have": "2",
+        "location": "43.70552167,-72.2830477",
+        "resp_time": 1366348761,
+        "schedule": "2",
+        "walk": "2"
+    },
+    {
+        "exercise": "2",
+        "have": "1",
+        "location": "43.70603783,-72.28336171",
+        "resp_time": 1367136460,
+        "schedule": "2",
+        "walk": "3"
+    },
+    {
+        "exercise": "1",
+        "have": "2",
+        "location": "43.70542597,-72.28318778",
+        "resp_time": 1366798371,
+        "schedule": "2",
+        "walk": "2"
+    },
+    {
+        "exercise": "1",
+        "have": "2",
+        "location": "43.70545297,-72.28328993",
+        "resp_time": 1367199777,
+        "schedule": "2",
+        "walk": "2"
+    },
+    {
+        "exercise": "1",
+        "have": "2",
+        "location": "43.70537434,-72.28318822",
+        "resp_time": 1367727590,
+        "schedule": "2",
+        "walk": "2"
+    },
+    {
+        "exercise": "1",
+        "have": "2",
+        "location": "43.70751488,-72.28536136",
+        "resp_time": 1367886878,
+        "schedule": "2",
+        "walk": "3"
+    },
+    {
+        "exercise": "1",
+        "have": "2",
+        "location": "43.70558555,-72.28313672",
+        "resp_time": 1368766117,
+        "schedule": "2",
+        "walk": "1"
+    },
+    {
+        "exercise": "1",
+        "have": "2",
+        "location": "43.70542822,-72.28305246",
+        "resp_time": 1368677192,
+        "schedule": "2",
+        "walk": "2"
+    },
+    {
+        "exercise": "1",
+        "have": "2",
+        "location": "43.70565067,-72.28319189",
+        "resp_time": 1369862008,
+        "schedule": "2",
+        "walk": "2"
+    },
+    {
+        "exercise": "1",
+        "have": "2",
+        "location": "43.70533454,-72.28299423",
+        "resp_time": 1369774020,
+        "schedule": "2",
+        "walk": "2"
+    }
+]

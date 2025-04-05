@@ -1,0 +1,361 @@
+[
+    {
+        "Social2": "2",
+        "null": "3",
+        "resp_time": 1364355709
+    },
+    {
+        "Social2": "1",
+        "null": "3",
+        "resp_time": 1364766360
+    },
+    {
+        "Social2": "1",
+        "null": "4",
+        "resp_time": 1364714884
+    },
+    {
+        "Social2": "1",
+        "null": "1",
+        "resp_time": 1364504734
+    },
+    {
+        "Social2": "2",
+        "null": "3",
+        "resp_time": 1364401053
+    },
+    {
+        "Social2": "1",
+        "null": "1",
+        "resp_time": 1364488512
+    },
+    {
+        "Social2": "1",
+        "null": "1",
+        "resp_time": 1364504650
+    },
+    {
+        "Social2": "2",
+        "null": "2",
+        "resp_time": 1364586033
+    },
+    {
+        "Social2": "2",
+        "null": "3",
+        "resp_time": 1364591002
+    },
+    {
+        "Social2": "1",
+        "null": "3",
+        "resp_time": 1364678997
+    },
+    {
+        "Social2": "1",
+        "null": "3",
+        "resp_time": 1364722681
+    },
+    {
+        "Social2": "2",
+        "null": "4",
+        "resp_time": 1364686737
+    },
+    {
+        "Social2": "3",
+        "null": "1",
+        "resp_time": 1364802337
+    },
+    {
+        "Social2": "3",
+        "null": "2",
+        "resp_time": 1364838928
+    },
+    {
+        "Social2": "2",
+        "null": "2",
+        "resp_time": 1364885611
+    },
+    {
+        "Social2": "3",
+        "null": "2",
+        "resp_time": 1364921517
+    },
+    {
+        "Social2": "3",
+        "null": "3",
+        "resp_time": 1365006154
+    },
+    {
+        "Social2": "1",
+        "null": "1",
+        "resp_time": 1364968729
+    },
+    {
+        "Social2": "2",
+        "null": "2",
+        "resp_time": 1364961714
+    },
+    {
+        "Social2": "2",
+        "null": "4",
+        "resp_time": 1365094685
+    },
+    {
+        "Social2": "1",
+        "null": "3",
+        "resp_time": 1365122568
+    },
+    {
+        "Social2": "2",
+        "null": "2",
+        "resp_time": 1365177679
+    },
+    {
+        "other_relaxing": "3",
+        "other_working": "1",
+        "relaxing": "2",
+        "resp_time": 1365393699,
+        "working": "1"
+    },
+    {
+        "Social2": "2",
+        "null": "3",
+        "resp_time": 1365293626
+    },
+    {
+        "Social2": "2",
+        "null": "2",
+        "resp_time": 1365313471
+    },
+    {
+        "other_relaxing": "4",
+        "other_working": "1",
+        "relaxing": "2",
+        "resp_time": 1365919394,
+        "working": "1"
+    },
+    {
+        "other_relaxing": "3",
+        "other_working": "3",
+        "relaxing": "2",
+        "resp_time": 1366071501,
+        "working": "2"
+    },
+    {
+        "other_relaxing": "2",
+        "other_working": "3",
+        "relaxing": "2",
+        "resp_time": 1365562510,
+        "working": "3"
+    },
+    {
+        "other_relaxing": "2",
+        "other_working": "3",
+        "relaxing": "2",
+        "resp_time": 1365574055,
+        "working": "3"
+    },
+    {
+        "other_relaxing": "1",
+        "other_working": "3",
+        "relaxing": "1",
+        "resp_time": 1365660562,
+        "working": "3"
+    },
+    {
+        "other_relaxing": "4",
+        "other_working": "1",
+        "relaxing": "2",
+        "resp_time": 1365898198,
+        "working": "1"
+    },
+    {
+        "other_relaxing": "3",
+        "other_working": "2",
+        "relaxing": "2",
+        "resp_time": 1365746741,
+        "working": "3"
+    },
+    {
+        "other_relaxing": "3",
+        "other_working": "2",
+        "relaxing": "3",
+        "resp_time": 1365969954,
+        "working": "2"
+    },
+    {
+        "location": "3",
+        "other_relaxing": "3",
+        "other_working": "3",
+        "relaxing": "2",
+        "resp_time": 1366317383,
+        "working": "2"
+    },
+    {
+        "location": "43.706240337342024,-72.28648857213557",
+        "other_relaxing": "4",
+        "other_working": "2",
+        "relaxing": "2",
+        "resp_time": 1366394706,
+        "working": "2"
+    },
+    {
+        "location": "43.7066536070779,-72.28823712095618",
+        "other_relaxing": "3",
+        "other_working": "3",
+        "relaxing": "2",
+        "resp_time": 1366918790,
+        "working": "2"
+    },
+    {
+        "location": "43.705566599965096,-72.29095076210797",
+        "other_relaxing": "3",
+        "other_working": "2",
+        "relaxing": "1",
+        "resp_time": 1366574542,
+        "working": "1"
+    },
+    {
+        "location": "43.70552251115441,-72.27840791456401",
+        "other_relaxing": "5",
+        "other_working": "1",
+        "relaxing": "2",
+        "resp_time": 1366537518,
+        "working": "1"
+    },
+    {
+        "location": "43.705394812859595,-72.28801399469376",
+        "other_relaxing": "1",
+        "other_working": "3",
+        "relaxing": "2",
+        "resp_time": 1366653391,
+        "working": "2"
+    },
+    {
+        "location": "43.7050887895748,-72.28777066804469",
+        "other_relaxing": "3",
+        "other_working": "3",
+        "relaxing": "2",
+        "resp_time": 1366998849,
+        "working": "2"
+    },
+    {
+        "location": "Unknown",
+        "other_relaxing": "4",
+        "other_working": "1",
+        "relaxing": "2",
+        "resp_time": 1367113063,
+        "working": "1"
+    },
+    {
+        "location": "43.70579710230231,-72.29083056561649",
+        "other_relaxing": "1",
+        "other_working": "5",
+        "relaxing": "1",
+        "resp_time": 1367348736,
+        "working": "2"
+    },
+    {
+        "location": "43.70395777747035,-72.28751711547375",
+        "other_relaxing": "2",
+        "other_working": "2",
+        "relaxing": "3",
+        "resp_time": 1367945943,
+        "working": "2"
+    },
+    {
+        "location": "43.70176318567246,-72.28840936906636",
+        "other_relaxing": "4",
+        "other_working": "1",
+        "relaxing": "2",
+        "resp_time": 1367721973,
+        "working": "1"
+    },
+    {
+        "location": "43.702828316017985,-72.29103868827224",
+        "other_relaxing": "2",
+        "other_working": "1",
+        "relaxing": "3",
+        "resp_time": 1367893887,
+        "working": "3"
+    },
+    {
+        "location": "43.705348586663604,-72.28977226652205",
+        "other_relaxing": "1",
+        "other_working": "3",
+        "relaxing": "3",
+        "resp_time": 1369181241,
+        "working": "1"
+    },
+    {
+        "location": "Unknown",
+        "other_relaxing": "1",
+        "other_working": "4",
+        "relaxing": "1",
+        "resp_time": 1369546496,
+        "working": "2"
+    },
+    {
+        "location": "Unknown",
+        "other_relaxing": "1",
+        "other_working": "4",
+        "relaxing": "1",
+        "resp_time": 1369546501,
+        "working": "2"
+    },
+    {
+        "location": "43.705819859169424,-72.29087230749428",
+        "other_relaxing": "4",
+        "other_working": "2",
+        "relaxing": "1",
+        "resp_time": 1369595865,
+        "working": "1"
+    },
+    {
+        "location": "43.70550733990967,-72.2909749019891",
+        "other_relaxing": "1",
+        "other_working": "4",
+        "relaxing": "1",
+        "resp_time": 1369681876,
+        "working": "3"
+    },
+    {
+        "location": "Unknown",
+        "other_relaxing": "1",
+        "other_working": "5",
+        "relaxing": "2",
+        "resp_time": 1369792895,
+        "working": "2"
+    },
+    {
+        "location": "43.705530599690974,-72.29089292697608",
+        "other_relaxing": "3",
+        "other_working": "3",
+        "relaxing": "2",
+        "resp_time": 1369930454,
+        "working": "1"
+    },
+    {
+        "location": "43.70569061022252,-72.2908440604806",
+        "other_relaxing": "5",
+        "other_working": "1",
+        "relaxing": "1",
+        "resp_time": 1370023880,
+        "working": "1"
+    },
+    {
+        "location": "29.90284461993724,-90.0272998586297",
+        "other_relaxing": "2",
+        "other_working": "3",
+        "relaxing": "2",
+        "resp_time": 1370303791,
+        "working": "3"
+    },
+    {
+        "location": "29.902841728180647,-90.02745660021901",
+        "other_relaxing": "3",
+        "other_working": "3",
+        "relaxing": "3",
+        "resp_time": 1370208770,
+        "working": "1"
+    }
+]

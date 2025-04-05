@@ -1,0 +1,186 @@
+[
+    {
+        "Social2": "4",
+        "null": "2",
+        "resp_time": 1364420615
+    },
+    {
+        "Social2": "4",
+        "null": "1",
+        "resp_time": 1364677273
+    },
+    {
+        "Social2": "4",
+        "null": "2",
+        "resp_time": 1365010864
+    },
+    {
+        "Social2": "4",
+        "null": "2",
+        "resp_time": 1365010863
+    },
+    {
+        "other_relaxing": "1",
+        "other_working": "1",
+        "relaxing": "1",
+        "resp_time": 1365487711,
+        "working": "4"
+    },
+    {
+        "Social2": "4",
+        "null": "1",
+        "resp_time": 1365486865
+    },
+    {
+        "Social2": "2",
+        "null": "1",
+        "resp_time": 1365486870
+    },
+    {
+        "Social2": "4",
+        "null": "1",
+        "resp_time": 1365486872
+    },
+    {
+        "Social2": "4",
+        "null": "3",
+        "resp_time": 1365486862
+    },
+    {
+        "other_relaxing": "1",
+        "other_working": "2",
+        "relaxing": "2",
+        "resp_time": 1365582024,
+        "working": "4"
+    },
+    {
+        "other_relaxing": "1",
+        "other_working": "1",
+        "relaxing": "1",
+        "resp_time": 1366014398,
+        "working": "5"
+    },
+    {
+        "other_relaxing": "1",
+        "other_working": "1",
+        "relaxing": "2",
+        "resp_time": 1365757597,
+        "working": "4"
+    },
+    {
+        "other_relaxing": "1",
+        "other_working": "2",
+        "relaxing": "1",
+        "resp_time": 1365843400,
+        "working": "4"
+    },
+    {
+        "other_relaxing": "1",
+        "other_working": "1",
+        "relaxing": "2",
+        "resp_time": 1365881606,
+        "working": "5"
+    },
+    {
+        "other_relaxing": "1",
+        "other_working": "1",
+        "relaxing": "2",
+        "resp_time": 1365930487,
+        "working": "5"
+    },
+    {
+        "other_relaxing": "1",
+        "other_working": "1",
+        "relaxing": "1",
+        "resp_time": 1366156233,
+        "working": "5"
+    },
+    {
+        "location": "null",
+        "other_relaxing": "1",
+        "other_working": "1",
+        "relaxing": "2",
+        "resp_time": 1366319398,
+        "working": "5"
+    },
+    {
+        "location": "43.70237732,-72.28914013",
+        "other_relaxing": "1",
+        "other_working": "1",
+        "relaxing": "2",
+        "resp_time": 1366338758,
+        "working": "5"
+    },
+    {
+        "location": "Unknown",
+        "other_relaxing": "1",
+        "other_working": "2",
+        "relaxing": "1",
+        "resp_time": 1366486937,
+        "working": "5"
+    },
+    {
+        "location": "Unknown",
+        "other_relaxing": "1",
+        "other_working": "1",
+        "relaxing": "2",
+        "resp_time": 1366534135,
+        "working": "5"
+    },
+    {
+        "location": "Unknown",
+        "other_relaxing": "1",
+        "other_working": "1",
+        "relaxing": "2",
+        "resp_time": 1366582165,
+        "working": "5"
+    },
+    {
+        "location": "43.7060191,-72.28758328",
+        "other_relaxing": "1",
+        "other_working": "1",
+        "relaxing": "2",
+        "resp_time": 1366996668,
+        "working": "5"
+    },
+    {
+        "location": "43.70366438,-72.2901632",
+        "other_relaxing": "1",
+        "other_working": "1",
+        "relaxing": "1",
+        "resp_time": 1367108596,
+        "working": "5"
+    },
+    {
+        "location": "43.7060191,-72.28758328",
+        "other_relaxing": "1",
+        "other_working": "1",
+        "relaxing": "2",
+        "resp_time": 1366967091,
+        "working": "5"
+    },
+    {
+        "location": "Unknown",
+        "other_relaxing": "1",
+        "other_working": "1",
+        "relaxing": "1",
+        "resp_time": 1367209698,
+        "working": "5"
+    },
+    {
+        "location": "43.704622379999996,-72.29115798",
+        "other_relaxing": "1",
+        "other_working": "1",
+        "relaxing": "1",
+        "resp_time": 1368656608,
+        "working": "5"
+    },
+    {
+        "location": "Unknown",
+        "other_relaxing": "1",
+        "other_working": "1",
+        "relaxing": "1",
+        "resp_time": 1369397191,
+        "working": "5"
+    }
+]

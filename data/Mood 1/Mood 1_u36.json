@@ -1,0 +1,32 @@
+[
+    {
+        "location": "43.65191693,-72.31010354",
+        "resp_time": 1366932815,
+        "tomorrow": "2"
+    },
+    {
+        "location": "43.71581669,-72.27584452",
+        "resp_time": 1367374171,
+        "tomorrow": "1"
+    },
+    {
+        "location": "Unknown",
+        "resp_time": 1368058052,
+        "tomorrow": "1"
+    },
+    {
+        "location": "43.70661474,-72.28680131",
+        "resp_time": 1367621272,
+        "tomorrow": "2"
+    },
+    {
+        "location": "43.70666049,-72.28716466",
+        "resp_time": 1369717535,
+        "tomorrow": "1"
+    },
+    {
+        "location": "43.65177487,-72.3099215",
+        "resp_time": 1369545196,
+        "tomorrow": "1"
+    }
+]

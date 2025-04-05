@@ -1,0 +1,281 @@
+[
+    {
+        "null": "5",
+        "resp_time": 1364683763
+    },
+    {
+        "null": "1",
+        "resp_time": 1364414610
+    },
+    {
+        "null": "3",
+        "resp_time": 1364456421
+    },
+    {
+        "null": "2",
+        "resp_time": 1364594391
+    },
+    {
+        "null": "1",
+        "resp_time": 1364800871
+    },
+    {
+        "null": "4",
+        "resp_time": 1365026536
+    },
+    {
+        "null": "1",
+        "resp_time": 1365204842
+    },
+    {
+        "null": "3",
+        "resp_time": 1365368971
+    },
+    {
+        "anxious": "2",
+        "calm": "3",
+        "conventional": "2",
+        "critical": "2",
+        "dependable": "4",
+        "disorganized": "2",
+        "enthusiastic": "2",
+        "experiences": "1",
+        "reserved": "4",
+        "resp_time": 1365455890,
+        "sympathetic": "2"
+    },
+    {
+        "anxious": "1",
+        "calm": "3",
+        "conventional": "4",
+        "critical": "2",
+        "dependable": "2",
+        "disorganized": "1",
+        "enthusiastic": "3",
+        "experiences": "4",
+        "reserved": "5",
+        "resp_time": 1365561167,
+        "sympathetic": "3"
+    },
+    {
+        "anxious": "2",
+        "calm": "4",
+        "conventional": "4",
+        "critical": "2",
+        "dependable": "3",
+        "disorganized": "2",
+        "enthusiastic": "2",
+        "experiences": "2",
+        "reserved": "5",
+        "resp_time": 1365722066,
+        "sympathetic": "3"
+    },
+    {
+        "anxious": "1",
+        "calm": "4",
+        "conventional": "4",
+        "critical": "1",
+        "dependable": "3",
+        "disorganized": "3",
+        "enthusiastic": "2",
+        "experiences": "3",
+        "reserved": "3",
+        "resp_time": 1366149930,
+        "sympathetic": "3"
+    },
+    {
+        "anxious": "2",
+        "calm": "4",
+        "conventional": "2",
+        "critical": "2",
+        "dependable": "4",
+        "disorganized": "1",
+        "enthusiastic": "3",
+        "experiences": "3",
+        "null": "3",
+        "reserved": "4",
+        "resp_time": 1366315249,
+        "sympathetic": "4"
+    },
+    {
+        "anxious": "1",
+        "calm": "4",
+        "conventional": "4",
+        "critical": "3",
+        "dependable": "3",
+        "disorganized": "1",
+        "enthusiastic": "3",
+        "experiences": "3",
+        "reserved": "4",
+        "resp_time": 1366252454,
+        "sympathetic": "2"
+    },
+    {
+        "anxious": "3",
+        "calm": "4",
+        "conventional": "3",
+        "critical": "2",
+        "dependable": "3",
+        "disorganized": "2",
+        "enthusiastic": "4",
+        "experiences": "4",
+        "location": "43.70435459,-72.29034651",
+        "reserved": "2",
+        "resp_time": 1367268501,
+        "sympathetic": "2"
+    },
+    {
+        "anxious": "1",
+        "calm": "5",
+        "conventional": "4",
+        "critical": "2",
+        "dependable": "3",
+        "disorganized": "3",
+        "enthusiastic": "4",
+        "experiences": "3",
+        "null": "43.70299464,-72.2902466",
+        "reserved": "4",
+        "resp_time": 1366754716,
+        "sympathetic": "5"
+    },
+    {
+        "anxious": "5",
+        "calm": "1",
+        "conventional": "5",
+        "critical": "5",
+        "dependable": "1",
+        "disorganized": "5",
+        "enthusiastic": "1",
+        "experiences": "1",
+        "location": "43.70383449,-72.29122954",
+        "reserved": "5",
+        "resp_time": 1367037245,
+        "sympathetic": "3"
+    },
+    {
+        "anxious": "1",
+        "calm": "4",
+        "conventional": "2",
+        "critical": "3",
+        "dependable": "3",
+        "disorganized": "2",
+        "enthusiastic": "1",
+        "experiences": "3",
+        "location": "43.70545477,-72.28953205",
+        "reserved": "5",
+        "resp_time": 1367458876,
+        "sympathetic": "4"
+    },
+    {
+        "anxious": "1",
+        "calm": "3",
+        "conventional": "3",
+        "critical": "2",
+        "dependable": "3",
+        "disorganized": "4",
+        "enthusiastic": "4",
+        "experiences": "4",
+        "location": "43.70317722,-72.28939878",
+        "reserved": "4",
+        "resp_time": 1368300316,
+        "sympathetic": "3"
+    },
+    {
+        "anxious": "4",
+        "calm": "3",
+        "conventional": "4",
+        "critical": "3",
+        "dependable": "3",
+        "disorganized": "3",
+        "enthusiastic": "1",
+        "experiences": "3",
+        "location": "43.70391463,-72.28988644",
+        "reserved": "5",
+        "resp_time": 1368576606,
+        "sympathetic": "3"
+    },
+    {
+        "anxious": "3",
+        "calm": "2",
+        "conventional": "4",
+        "critical": "1",
+        "dependable": "2",
+        "disorganized": "3",
+        "enthusiastic": "3",
+        "experiences": "2",
+        "location": "43.70745176,-72.28884841",
+        "reserved": "4",
+        "resp_time": 1368233891,
+        "sympathetic": "4"
+    },
+    {
+        "anxious": "3",
+        "calm": "3",
+        "conventional": "4",
+        "critical": "4",
+        "dependable": "3",
+        "disorganized": "3",
+        "enthusiastic": "1",
+        "experiences": "2",
+        "location": "43.70374249,-72.29050587",
+        "reserved": "5",
+        "resp_time": 1368665868,
+        "sympathetic": "3"
+    },
+    {
+        "anxious": "3",
+        "calm": "3",
+        "conventional": "2",
+        "critical": "2",
+        "dependable": "3",
+        "disorganized": "3",
+        "enthusiastic": "4",
+        "experiences": "4",
+        "location": "43.70444528,-72.29050901",
+        "reserved": "3",
+        "resp_time": 1368045137,
+        "sympathetic": "4"
+    },
+    {
+        "anxious": "2",
+        "calm": "3",
+        "conventional": "4",
+        "critical": "5",
+        "dependable": "3",
+        "disorganized": "3",
+        "enthusiastic": "1",
+        "experiences": "1",
+        "location": "43.70339979,-72.28817654",
+        "reserved": "5",
+        "resp_time": 1368480653,
+        "sympathetic": "2"
+    },
+    {
+        "anxious": "3",
+        "calm": "3",
+        "conventional": "3",
+        "critical": "1",
+        "dependable": "3",
+        "disorganized": "3",
+        "enthusiastic": "5",
+        "experiences": "3",
+        "location": "43.70695744,-72.28713032",
+        "reserved": "2",
+        "resp_time": 1368836329,
+        "sympathetic": "3"
+    },
+    {
+        "anxious": "4",
+        "calm": "1",
+        "conventional": "3",
+        "critical": "5",
+        "dependable": "3",
+        "disorganized": "2",
+        "enthusiastic": "1",
+        "experiences": "1",
+        "location": "43.68753666,-72.29250241",
+        "reserved": "3",
+        "resp_time": 1369719792,
+        "sympathetic": "1"
+    }
+]

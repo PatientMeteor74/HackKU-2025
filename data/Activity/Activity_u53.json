@@ -1,0 +1,94 @@
+[
+    {
+        "Social2": "3",
+        "null": "1",
+        "resp_time": 1364428192
+    },
+    {
+        "Social2": "1",
+        "null": "3",
+        "resp_time": 1364500789
+    },
+    {
+        "Social2": "2",
+        "null": "3",
+        "resp_time": 1364592768
+    },
+    {
+        "Social2": "1",
+        "null": "4",
+        "resp_time": 1364797371
+    },
+    {
+        "Social2": "2",
+        "null": "3",
+        "resp_time": 1364797368
+    },
+    {
+        "Social2": "2",
+        "null": "3",
+        "resp_time": 1364976635
+    },
+    {
+        "Social2": "2",
+        "null": "1",
+        "resp_time": 1365128518
+    },
+    {
+        "Social2": "2",
+        "null": "2",
+        "resp_time": 1365217505
+    },
+    {
+        "other_relaxing": "2",
+        "other_working": "2",
+        "relaxing": "2",
+        "resp_time": 1365584648,
+        "working": "3"
+    },
+    {
+        "other_relaxing": "1",
+        "other_working": "3",
+        "relaxing": "1",
+        "resp_time": 1365840668,
+        "working": "4"
+    },
+    {
+        "other_relaxing": "4",
+        "other_working": "1",
+        "relaxing": "1",
+        "resp_time": 1365926281,
+        "working": "1"
+    },
+    {
+        "other_relaxing": "2",
+        "other_working": "3",
+        "relaxing": "1",
+        "resp_time": 1366013630,
+        "working": "1"
+    },
+    {
+        "location": "43.70755802,-72.28617355",
+        "other_relaxing": "1",
+        "other_working": "3",
+        "relaxing": "1",
+        "resp_time": 1366336932,
+        "working": "3"
+    },
+    {
+        "location": "43.70523337,-72.28335329",
+        "other_relaxing": "2",
+        "other_working": "1",
+        "relaxing": "1",
+        "resp_time": 1366664423,
+        "working": "4"
+    },
+    {
+        "location": "43.70356731,-72.28790087",
+        "other_relaxing": "3",
+        "other_working": "1",
+        "relaxing": "3",
+        "resp_time": 1368661111,
+        "working": "1"
+    }
+]

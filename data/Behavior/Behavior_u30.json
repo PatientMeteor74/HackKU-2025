@@ -1,0 +1,103 @@
+[
+    {
+        "null": "1",
+        "resp_time": 1364527435
+    },
+    {
+        "null": "4",
+        "resp_time": 1364600197
+    },
+    {
+        "null": "2",
+        "resp_time": 1364757507
+    },
+    {
+        "null": "4",
+        "resp_time": 1365015403
+    },
+    {
+        "null": "1",
+        "resp_time": 1365285714
+    },
+    {
+        "anxious": "1",
+        "calm": "4",
+        "conventional": "3",
+        "critical": "1",
+        "dependable": "4",
+        "disorganized": "1",
+        "enthusiastic": "4",
+        "experiences": "4",
+        "reserved": "1",
+        "resp_time": 1365468715,
+        "sympathetic": "3"
+    },
+    {
+        "anxious": "4",
+        "calm": "3",
+        "conventional": "3",
+        "critical": "1",
+        "dependable": "4",
+        "disorganized": "1",
+        "enthusiastic": "4",
+        "experiences": "2",
+        "reserved": "3",
+        "resp_time": 1366231161,
+        "sympathetic": "4"
+    },
+    {
+        "anxious": "2",
+        "calm": "4",
+        "conventional": "2",
+        "critical": "1",
+        "dependable": "4",
+        "disorganized": "1",
+        "enthusiastic": "2",
+        "experiences": "4",
+        "reserved": "4",
+        "resp_time": 1366148800,
+        "sympathetic": "4"
+    },
+    {
+        "anxious": "1",
+        "calm": "4",
+        "conventional": "3",
+        "critical": "1",
+        "dependable": "2",
+        "disorganized": "1",
+        "enthusiastic": "4",
+        "experiences": "3",
+        "null": "41.23064284,-73.0728831",
+        "reserved": "1",
+        "resp_time": 1366495759,
+        "sympathetic": "4"
+    },
+    {
+        "anxious": "1",
+        "calm": "4",
+        "conventional": "3",
+        "critical": "1",
+        "dependable": "3",
+        "disorganized": "1",
+        "enthusiastic": "2",
+        "experiences": "3",
+        "null": "41.23064284,-73.0728831",
+        "reserved": "4",
+        "resp_time": 1366608013,
+        "sympathetic": "3"
+    },
+    {
+        "anxious": "2",
+        "calm": "4",
+        "conventional": "3",
+        "critical": "1",
+        "dependable": "4",
+        "disorganized": "1",
+        "enthusiastic": "2",
+        "experiences": "3",
+        "location": "43.70906142,-72.28431236",
+        "reserved": "4",
+        "resp_time": 1367258427,
+        "sympathetic": "3"
+    }
+]

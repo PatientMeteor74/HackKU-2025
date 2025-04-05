@@ -1,0 +1,155 @@
+[
+    {
+        "null": "15",
+        "resp_time": 1364118941
+    },
+    {
+        "null": "1",
+        "resp_time": 1364122069
+    },
+    {
+        "null": "43.70499462,-72.28868604",
+        "resp_time": 1364122075
+    },
+    {
+        "null": "43.70499462,-72.28868604",
+        "resp_time": 1364122073
+    },
+    {
+        "null": "43.70499462,-72.28868604",
+        "resp_time": 1364122071
+    },
+    {
+        "hour": "7",
+        "location": "Unknown",
+        "rate": "2",
+        "resp_time": 1364546203,
+        "social": "3"
+    },
+    {
+        "hour": "8",
+        "location": "43.70603333,-72.28705357",
+        "rate": "1",
+        "resp_time": 1364583743,
+        "social": "1"
+    },
+    {
+        "hour": "8",
+        "location": "43.70471098,-72.2906745",
+        "rate": "1",
+        "resp_time": 1364695641,
+        "social": "1"
+    },
+    {
+        "hour": "8",
+        "location": "43.70428082,-72.28776631",
+        "rate": "2",
+        "resp_time": 1365012097,
+        "social": "1"
+    },
+    {
+        "hour": "8",
+        "location": "43.70457417,-72.29062836",
+        "rate": "2",
+        "resp_time": 1365007335,
+        "social": "1"
+    },
+    {
+        "hour": "6",
+        "location": "43.70671181,-72.28623406",
+        "rate": "3",
+        "resp_time": 1364966303,
+        "social": "1"
+    },
+    {
+        "hour": "6",
+        "location": "43.70384903,-72.28732435",
+        "rate": "2",
+        "resp_time": 1365184829,
+        "social": "1"
+    },
+    {
+        "hour": "10",
+        "location": "41.50578384,-71.45561789",
+        "rate": "2",
+        "resp_time": 1365395364,
+        "social": "2"
+    },
+    {
+        "hour": "10",
+        "location": "Unknown",
+        "rate": "1",
+        "resp_time": 1365395365,
+        "social": "1"
+    },
+    {
+        "hour": "6",
+        "location": "43.70384519,-72.28717248",
+        "rate": "3",
+        "resp_time": 1365443996,
+        "social": "1"
+    },
+    {
+        "hour": "8",
+        "location": "43.70423505,-72.29046602",
+        "rate": "3",
+        "resp_time": 1365526606,
+        "social": "1"
+    },
+    {
+        "hour": "6",
+        "location": "Unknown",
+        "rate": "2",
+        "resp_time": 1365791870,
+        "social": "3"
+    },
+    {
+        "hour": "7",
+        "location": "43.70578547,-72.28703541",
+        "rate": "2",
+        "resp_time": 1365616874,
+        "social": "1"
+    },
+    {
+        "hour": "6",
+        "location": "Unknown",
+        "rate": "2",
+        "resp_time": 1366316159,
+        "social": "1"
+    },
+    {
+        "hour": "8",
+        "location": "43.70591041,-72.28826857",
+        "rate": "1",
+        "resp_time": 1366167770,
+        "social": "1"
+    },
+    {
+        "hour": "6",
+        "location": "43.70808053,-72.28506786",
+        "rate": "1",
+        "resp_time": 1366049005,
+        "social": "1"
+    },
+    {
+        "hour": "9",
+        "location": "43.70591041,-72.28826857",
+        "rate": "1",
+        "resp_time": 1366167725,
+        "social": "1"
+    },
+    {
+        "hour": "8",
+        "location": "43.70746352,-72.28565777",
+        "rate": "1",
+        "resp_time": 1366653844,
+        "social": "1"
+    },
+    {
+        "hour": "4",
+        "location": "Unknown",
+        "rate": "4",
+        "resp_time": 1369847081,
+        "social": "1"
+    }
+]

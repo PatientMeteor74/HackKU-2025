@@ -1,0 +1,24 @@
+[
+    {
+        "exercise": "2",
+        "have": "1",
+        "resp_time": 1365381690,
+        "schedule": "2",
+        "walk": "1"
+    },
+    {
+        "exercise": "1",
+        "have": "2",
+        "resp_time": 1366165059,
+        "schedule": "1",
+        "walk": "2"
+    },
+    {
+        "exercise": "1",
+        "have": "2",
+        "location": "43.71655956,-72.30945355",
+        "resp_time": 1366783816,
+        "schedule": "1",
+        "walk": "3"
+    }
+]

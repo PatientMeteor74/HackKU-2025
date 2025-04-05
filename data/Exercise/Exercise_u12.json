@@ -1,0 +1,66 @@
+[
+    {
+        "exercise": "3",
+        "have": "1",
+        "resp_time": 1365010008,
+        "schedule": "2",
+        "walk": "2"
+    },
+    {
+        "exercise": "1",
+        "have": "2",
+        "resp_time": 1365127231,
+        "schedule": "1",
+        "walk": "3"
+    },
+    {
+        "exercise": "4",
+        "have": "1",
+        "resp_time": 1365314957,
+        "schedule": "null",
+        "walk": "2"
+    },
+    {
+        "exercise": "1",
+        "have": "2",
+        "resp_time": 1365219610,
+        "schedule": "1",
+        "walk": "3"
+    },
+    {
+        "exercise": "3",
+        "have": "1",
+        "resp_time": 1365969867,
+        "schedule": "2",
+        "walk": "2"
+    },
+    {
+        "exercise": "1",
+        "have": "2",
+        "resp_time": 1365891822,
+        "schedule": "1",
+        "walk": "1"
+    },
+    {
+        "exercise": "1",
+        "have": "2",
+        "resp_time": 1365706555,
+        "schedule": "1",
+        "walk": "1"
+    },
+    {
+        "exercise": "1",
+        "have": "2",
+        "resp_time": 1365788938,
+        "schedule": "1",
+        "walk": "1"
+    },
+    {
+        "exercise": "3",
+        "have": "1",
+        "location": "43.63764029,-72.2483575",
+        "resp_time": 1370020046,
+        "schedule": "2",
+        "walk": "2"
+    }
+]

@@ -1,0 +1,22 @@
+[
+    {
+        "location": "43.70453787,-72.28741118",
+        "resp_time": 1366927728,
+        "tomorrow": "1"
+    },
+    {
+        "location": "Unknown",
+        "resp_time": 1367103910,
+        "tomorrow": "2"
+    },
+    {
+        "location": "43.70595378,-72.28847925",
+        "resp_time": 1367460073,
+        "tomorrow": "1"
+    },
+    {
+        "location": "Unknown",
+        "resp_time": 1369541130,
+        "tomorrow": "1"
+    }
+]

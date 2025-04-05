@@ -1,0 +1,110 @@
+[
+    {
+        "null": "1",
+        "resp_time": 1364121437
+    },
+    {
+        "null": "1",
+        "resp_time": 1364118985
+    },
+    {
+        "null": "1",
+        "resp_time": 1364121435
+    },
+    {
+        "null": "1",
+        "resp_time": 1364121434
+    },
+    {
+        "null": "1",
+        "resp_time": 1364118978
+    },
+    {
+        "null": "1",
+        "resp_time": 1364122002
+    },
+    {
+        "hour": "5",
+        "location": "43.70413881,-72.29529625",
+        "rate": "3",
+        "resp_time": 1364490076,
+        "social": "2"
+    },
+    {
+        "hour": "6",
+        "location": "43.70508892,-72.29181124",
+        "rate": "2",
+        "resp_time": 1364632052,
+        "social": "1"
+    },
+    {
+        "hour": "4",
+        "location": "41.55404933,-73.03993472",
+        "rate": "3",
+        "resp_time": 1364753475,
+        "social": "4"
+    },
+    {
+        "hour": "5",
+        "location": "43.70607312,-72.28941569",
+        "rate": "3",
+        "resp_time": 1365182334,
+        "social": "2"
+    },
+    {
+        "hour": "5",
+        "location": "42.99131275,-89.56850017",
+        "rate": "3",
+        "resp_time": 1365557660,
+        "social": "2"
+    },
+    {
+        "hour": "8",
+        "location": "Unknown",
+        "rate": "1",
+        "resp_time": 1365705586,
+        "social": "1"
+    },
+    {
+        "hour": "5",
+        "location": "43.70825863,-72.28467568",
+        "rate": "3",
+        "resp_time": 1365790160,
+        "social": "2"
+    },
+    {
+        "hour": "6",
+        "location": "43.70684315,-72.28727941",
+        "rate": "2",
+        "resp_time": 1365967467,
+        "social": "1"
+    },
+    {
+        "hour": "7",
+        "location": "43.70684315,-72.28727941",
+        "rate": "1",
+        "resp_time": 1366046298,
+        "social": "1"
+    },
+    {
+        "hour": "6",
+        "location": "43.70684315,-72.28727941",
+        "rate": "1",
+        "resp_time": 1366132595,
+        "social": "1"
+    },
+    {
+        "hour": "4",
+        "location": "43.70611494,-72.28821312",
+        "rate": "3",
+        "resp_time": 1366222570,
+        "social": "1"
+    },
+    {
+        "hour": "6",
+        "location": "Unknown",
+        "rate": "2",
+        "resp_time": 1366574628,
+        "social": "1"
+    }
+]

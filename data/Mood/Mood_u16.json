@@ -1,0 +1,170 @@
+[
+    {
+        "happy": "1",
+        "happyornot": "1",
+        "location": "43.70381392,-72.29084126",
+        "resp_time": 1366956931,
+        "sad": "4",
+        "sadornot": "1"
+    },
+    {
+        "happy": "1",
+        "happyornot": "2",
+        "location": "43.70383449,-72.29122954",
+        "resp_time": 1367037294,
+        "sad": "1",
+        "sadornot": "1"
+    },
+    {
+        "happy": "1",
+        "happyornot": "2",
+        "location": "43.70381392,-72.29084126",
+        "resp_time": 1367006807,
+        "sad": "1",
+        "sadornot": "1"
+    },
+    {
+        "happy": "3",
+        "happyornot": "1",
+        "location": "43.70376088,-72.29035391",
+        "resp_time": 1367341931,
+        "sad": "1",
+        "sadornot": "2"
+    },
+    {
+        "happy": "2",
+        "happyornot": "1",
+        "location": "Unknown",
+        "resp_time": 1367443156,
+        "sad": "1",
+        "sadornot": "2"
+    },
+    {
+        "happy": "1",
+        "happyornot": "1",
+        "location": "43.70355342,-72.29047722",
+        "resp_time": 1367691606,
+        "sad": "1",
+        "sadornot": "2"
+    },
+    {
+        "happy": "2",
+        "happyornot": "1",
+        "location": "43.70369577,-72.29064258",
+        "resp_time": 1367799036,
+        "sad": "1",
+        "sadornot": "1"
+    },
+    {
+        "happy": "2",
+        "happyornot": "1",
+        "location": "43.70369577,-72.29064258",
+        "resp_time": 1367860645,
+        "sad": "2",
+        "sadornot": "1"
+    },
+    {
+        "happy": "4",
+        "happyornot": "1",
+        "location": "Unknown",
+        "resp_time": 1368386071,
+        "sad": "1",
+        "sadornot": "2"
+    },
+    {
+        "happy": "3",
+        "happyornot": "1",
+        "location": "43.70391463,-72.28988644",
+        "resp_time": 1368506811,
+        "sad": "1",
+        "sadornot": "1"
+    },
+    {
+        "happy": "2",
+        "happyornot": "1",
+        "location": "43.70317722,-72.28939878",
+        "resp_time": 1368290120,
+        "sad": "1",
+        "sadornot": "1"
+    },
+    {
+        "happy": "2",
+        "happyornot": "1",
+        "location": "43.70534496,-72.29049134",
+        "resp_time": 1367948858,
+        "sad": "1",
+        "sadornot": "1"
+    },
+    {
+        "happy": "3",
+        "happyornot": "1",
+        "location": "43.70374249,-72.29050587",
+        "resp_time": 1368691411,
+        "sad": "3",
+        "sadornot": "1"
+    },
+    {
+        "happy": "1",
+        "happyornot": "1",
+        "location": "43.70391463,-72.28988644",
+        "resp_time": 1368597705,
+        "sad": "1",
+        "sadornot": "1"
+    },
+    {
+        "happy": "1",
+        "happyornot": "1",
+        "location": "43.70391463,-72.28988644",
+        "resp_time": 1368576687,
+        "sad": "2",
+        "sadornot": "1"
+    },
+    {
+        "happy": "3",
+        "happyornot": "1",
+        "location": "43.70374249,-72.29050587",
+        "resp_time": 1368653757,
+        "sad": "1",
+        "sadornot": "1"
+    },
+    {
+        "happy": "1",
+        "happyornot": "1",
+        "location": "Unknown",
+        "resp_time": 1369104334,
+        "sad": "3",
+        "sadornot": "1"
+    },
+    {
+        "happy": "3",
+        "happyornot": "1",
+        "location": "43.70241487,-72.28957711",
+        "resp_time": 1369194923,
+        "sad": "1",
+        "sadornot": "1"
+    },
+    {
+        "happy": "1",
+        "happyornot": "1",
+        "location": "43.70688262,-72.28760657",
+        "resp_time": 1369277556,
+        "sad": "3",
+        "sadornot": "1"
+    },
+    {
+        "happy": "3",
+        "happyornot": "1",
+        "location": "43.70675104,-72.28740962",
+        "resp_time": 1369365516,
+        "sad": "3",
+        "sadornot": "1"
+    },
+    {
+        "happy": "3",
+        "happyornot": "1",
+        "location": "43.70372826,-72.29097234",
+        "resp_time": 1369417088,
+        "sad": "1",
+        "sadornot": "1"
+    }
+]

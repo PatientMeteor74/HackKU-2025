@@ -1,0 +1,92 @@
+[
+    {
+        "null": "4",
+        "resp_time": 1364118950
+    },
+    {
+        "null": "4",
+        "resp_time": 1364121463
+    },
+    {
+        "null": "3",
+        "resp_time": 1364121465
+    },
+    {
+        "null": "43.70643224,-72.28718618",
+        "resp_time": 1364121461
+    },
+    {
+        "null": "43.70643224,-72.28718618",
+        "resp_time": 1364121796
+    },
+    {
+        "location": "43.70909673,-72.28432992",
+        "number": "4",
+        "resp_time": 1364535848
+    },
+    {
+        "location": "43.70909673,-72.28432992",
+        "number": "4",
+        "resp_time": 1364538918
+    },
+    {
+        "location": "43.44153531,-72.06255875",
+        "number": "5",
+        "resp_time": 1364794074
+    },
+    {
+        "location": "43.70076509,-72.2869313",
+        "number": "3",
+        "resp_time": 1364627124
+    },
+    {
+        "location": "42.00881745,-71.3042994",
+        "number": "3",
+        "resp_time": 1364789483
+    },
+    {
+        "location": "43.70433167,-72.28846521",
+        "number": "3",
+        "resp_time": 1364966403
+    },
+    {
+        "location": "43.70115034,-72.2859029",
+        "number": "3",
+        "resp_time": 1365054027
+    },
+    {
+        "location": "Unknown",
+        "number": "4",
+        "resp_time": 1365188158
+    },
+    {
+        "location": "Unknown",
+        "number": "2",
+        "resp_time": 1365400367
+    },
+    {
+        "location": "Unknown",
+        "number": "2",
+        "resp_time": 1365400387
+    },
+    {
+        "location": "Unknown",
+        "number": "3",
+        "resp_time": 1365710494
+    },
+    {
+        "location": "43.70609873,-72.28690685",
+        "number": "2",
+        "resp_time": 1366095876
+    },
+    {
+        "location": "43.7004869,-72.28717433",
+        "number": "3",
+        "resp_time": 1366268665
+    },
+    {
+        "location": "Unknown",
+        "number": "2",
+        "resp_time": 1366528275
+    }
+]

@@ -1,0 +1,34 @@
+[
+    {
+        "happy": "2",
+        "happyornot": "1",
+        "location": "43.66508629,-72.25726975",
+        "resp_time": 1368474041,
+        "sad": "1",
+        "sadornot": "2"
+    },
+    {
+        "happy": "2",
+        "happyornot": "1",
+        "location": "43.66508629,-72.25726975",
+        "resp_time": 1368474027,
+        "sad": "1",
+        "sadornot": "2"
+    },
+    {
+        "happy": "3",
+        "happyornot": "1",
+        "location": "43.70966169,-72.28438979",
+        "resp_time": 1368617110,
+        "sad": "1",
+        "sadornot": "2"
+    },
+    {
+        "happy": "2",
+        "happyornot": "1",
+        "location": "43.65861333,-72.24866914",
+        "resp_time": 1369018616,
+        "sad": "1",
+        "sadornot": "2"
+    }
+]

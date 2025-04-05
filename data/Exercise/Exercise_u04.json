@@ -1,0 +1,93 @@
+[
+    {
+        "exercise": "5",
+        "have": "1",
+        "resp_time": 1365008047,
+        "schedule": "1",
+        "walk": "3"
+    },
+    {
+        "exercise": "4",
+        "have": "1",
+        "resp_time": 1365089873,
+        "schedule": "2",
+        "walk": "3"
+    },
+    {
+        "exercise": "4",
+        "have": "1",
+        "resp_time": 1365301073,
+        "schedule": "null",
+        "walk": "3"
+    },
+    {
+        "exercise": "4",
+        "have": "1",
+        "resp_time": 1365385313,
+        "schedule": "2",
+        "walk": "2"
+    },
+    {
+        "exercise": "4",
+        "have": "1",
+        "resp_time": 1366254139,
+        "schedule": "2",
+        "walk": "3"
+    },
+    {
+        "exercise": "5",
+        "have": "1",
+        "location": "43.70558971,-72.29688149",
+        "resp_time": 1366344431,
+        "schedule": "null",
+        "walk": "3"
+    },
+    {
+        "exercise": "4",
+        "have": "1",
+        "location": "43.70310692,-72.28998483",
+        "resp_time": 1366792255,
+        "schedule": "2",
+        "walk": "2"
+    },
+    {
+        "exercise": "3",
+        "have": "1",
+        "location": "43.70310102,-72.28960565",
+        "resp_time": 1367203184,
+        "schedule": "2",
+        "walk": "2"
+    },
+    {
+        "exercise": "4",
+        "have": "1",
+        "location": "43.70344161,-72.28587472",
+        "resp_time": 1367294366,
+        "schedule": "null",
+        "walk": "2"
+    },
+    {
+        "exercise": "4",
+        "have": "1",
+        "location": "43.70556561,-72.29643857",
+        "resp_time": 1367890383,
+        "schedule": "2",
+        "walk": "3"
+    },
+    {
+        "exercise": "4",
+        "have": "1",
+        "location": "43.7019109,-72.28816483",
+        "resp_time": 1368595495,
+        "schedule": "null",
+        "walk": "3"
+    },
+    {
+        "exercise": "4",
+        "have": "1",
+        "location": "43.7026866,-72.28761377",
+        "resp_time": 1368677894,
+        "schedule": "null",
+        "walk": "2"
+    }
+]

@@ -1,0 +1,57 @@
+[
+    {
+        "null": "1",
+        "resp_time": 1364426305
+    },
+    {
+        "null": "1",
+        "resp_time": 1364515351
+    },
+    {
+        "null": "3",
+        "resp_time": 1364857050
+    },
+    {
+        "null": "5",
+        "resp_time": 1365368539
+    },
+    {
+        "anxious": "1",
+        "calm": "3",
+        "conventional": "3",
+        "critical": "1",
+        "dependable": "3",
+        "disorganized": "3",
+        "enthusiastic": "3",
+        "experiences": "2",
+        "reserved": "3",
+        "resp_time": 1365498518,
+        "sympathetic": "3"
+    },
+    {
+        "anxious": "1",
+        "calm": "5",
+        "conventional": "3",
+        "critical": "1",
+        "dependable": "4",
+        "disorganized": "1",
+        "enthusiastic": "3",
+        "experiences": "3",
+        "reserved": "4",
+        "resp_time": 1366233972,
+        "sympathetic": "3"
+    },
+    {
+        "anxious": "1",
+        "calm": "5",
+        "conventional": "3",
+        "critical": "1",
+        "dependable": "3",
+        "disorganized": "1",
+        "enthusiastic": "3",
+        "experiences": "3",
+        "reserved": "3",
+        "resp_time": 1366317630,
+        "sympathetic": "3"
+    }
+]

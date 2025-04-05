@@ -1,0 +1,92 @@
+[
+    {
+        "Social2": "4",
+        "null": "4",
+        "resp_time": 1364515323
+    },
+    {
+        "Social2": "3",
+        "null": "2",
+        "resp_time": 1364426258
+    },
+    {
+        "Social2": "1",
+        "null": "1",
+        "resp_time": 1364584917
+    },
+    {
+        "Social2": "1",
+        "null": "5",
+        "resp_time": 1364669949
+    },
+    {
+        "Social2": "4",
+        "null": "3",
+        "resp_time": 1364811725
+    },
+    {
+        "Social2": "3",
+        "null": "2",
+        "resp_time": 1364884574
+    },
+    {
+        "other_relaxing": "2",
+        "other_working": "3",
+        "relaxing": "1",
+        "resp_time": 1365394124,
+        "working": "1"
+    },
+    {
+        "other_relaxing": "2",
+        "other_working": "3",
+        "relaxing": "1",
+        "resp_time": 1365492893,
+        "working": "3"
+    },
+    {
+        "other_relaxing": "3",
+        "other_working": "1",
+        "relaxing": "3",
+        "resp_time": 1365758223,
+        "working": "2"
+    },
+    {
+        "other_relaxing": "2",
+        "other_working": "4",
+        "relaxing": "1",
+        "resp_time": 1366043974,
+        "working": "1"
+    },
+    {
+        "location": "43.70497161,-72.28670851",
+        "other_relaxing": "2",
+        "other_working": "4",
+        "relaxing": "1",
+        "resp_time": 1366576394,
+        "working": "1"
+    },
+    {
+        "location": "43.7048191,-72.2868582",
+        "other_relaxing": "2",
+        "other_working": "1",
+        "relaxing": "2",
+        "resp_time": 1366823854,
+        "working": "3"
+    },
+    {
+        "location": "43.70453787,-72.28741118",
+        "other_relaxing": "3",
+        "other_working": "2",
+        "relaxing": "3",
+        "resp_time": 1366913230,
+        "working": "3"
+    },
+    {
+        "location": "42.34885369,-71.13112232",
+        "other_relaxing": "3",
+        "other_working": "3",
+        "relaxing": "1",
+        "resp_time": 1367177125,
+        "working": "1"
+    }
+]

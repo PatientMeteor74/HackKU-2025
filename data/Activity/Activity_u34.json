@@ -1,0 +1,25 @@
+[
+    {
+        "Social2": "2",
+        "null": "1",
+        "resp_time": 1364768246
+    },
+    {
+        "Social2": "1",
+        "null": "1",
+        "resp_time": 1364504644
+    },
+    {
+        "Social2": "1",
+        "null": "2",
+        "resp_time": 1364889084
+    },
+    {
+        "location": "43.70778087,-72.284494",
+        "other_relaxing": "3",
+        "other_working": "3",
+        "relaxing": "4",
+        "resp_time": 1368586573,
+        "working": "2"
+    }
+]

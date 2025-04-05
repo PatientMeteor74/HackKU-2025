@@ -1,0 +1,63 @@
+[
+    {
+        "exercise": "2",
+        "have": "2",
+        "resp_time": 1365182985,
+        "schedule": "2",
+        "walk": "2"
+    },
+    {
+        "exercise": "2",
+        "have": "2",
+        "resp_time": 1365358326,
+        "schedule": "2",
+        "walk": "2"
+    },
+    {
+        "exercise": "2",
+        "have": "1",
+        "resp_time": 1365709461,
+        "schedule": "2",
+        "walk": "2"
+    },
+    {
+        "exercise": "1",
+        "have": "2",
+        "location": "43.70526343,-72.28319273",
+        "resp_time": 1366603226,
+        "schedule": "2",
+        "walk": "2"
+    },
+    {
+        "exercise": "2",
+        "have": "2",
+        "location": "43.70532812,-72.28315379",
+        "resp_time": 1367205648,
+        "schedule": "2",
+        "walk": "2"
+    },
+    {
+        "exercise": "2",
+        "have": "2",
+        "location": "43.70529403,-72.28319906",
+        "resp_time": 1367121303,
+        "schedule": "2",
+        "walk": "2"
+    },
+    {
+        "exercise": "2",
+        "have": "2",
+        "location": "43.70522961,-72.2829144",
+        "resp_time": 1367287209,
+        "schedule": "2",
+        "walk": "3"
+    },
+    {
+        "exercise": "2",
+        "have": "2",
+        "location": "43.70525531,-72.28306569",
+        "resp_time": 1367803178,
+        "schedule": "2",
+        "walk": "2"
+    }
+]

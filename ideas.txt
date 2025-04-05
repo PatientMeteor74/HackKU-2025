@@ -33,8 +33,6 @@ Calorie burner counter w/ raspberry pi
     Upon installation, set target calorie defecit, optionally ask for current weight, desired weight, age, gender, height?
     When pulse monitor is worn, track calories as a function of heartrate.
     Otherwise, extrapolate caloric data with some distance function
-        
-
     
 
 Mental health tracker
@@ -54,4 +52,3 @@ Mental health tracker
         
     
     General emphasis on sound and UI design
-    

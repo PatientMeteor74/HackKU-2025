@@ -1,0 +1,40 @@
+[
+    {
+        "null": "3",
+        "resp_time": 1364460484
+    },
+    {
+        "null": "1",
+        "resp_time": 1365027752
+    },
+    {
+        "null": "5",
+        "resp_time": 1364854120
+    },
+    {
+        "anxious": "1",
+        "calm": "5",
+        "conventional": "1",
+        "critical": "2",
+        "dependable": "2",
+        "disorganized": "2",
+        "enthusiastic": "5",
+        "experiences": "4",
+        "reserved": "1",
+        "resp_time": 1365454835,
+        "sympathetic": "3"
+    },
+    {
+        "anxious": "3",
+        "calm": "2",
+        "conventional": "4",
+        "critical": "2",
+        "dependable": "4",
+        "disorganized": "2",
+        "enthusiastic": "2",
+        "experiences": "3",
+        "reserved": "3",
+        "resp_time": 1366228941,
+        "sympathetic": "2"
+    }
+]
