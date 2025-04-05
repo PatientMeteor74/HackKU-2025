@@ -38,10 +38,6 @@ Calorie burner counter w/ raspberry pi
     
 
 Mental health tracker
-    Uses:
-        Godot Engine for interface
-
-
     Upon installing, requires you to enter your current mental improvement mediums
         e.g. Reading, writing, personal projects, playing an instrument
     User sets length of time they want to work on this each day
@@ -53,6 +49,9 @@ Mental health tracker
             Emergency button towards the bottom, otherwise puts the phone in sleep if we can do so
         When timer ends, track the progress in a roadmap style. Return phone to normal function.
         Large "Completed a Task?" button to allow the user to add/remove tasks. Roadmap updates.
+    Roadmap shows your progress in happiness plotted directly (points are connected)
+        Also shows a linear regression of projected happiness trained on dataset given the current "happiness variables".
+        
     
     General emphasis on sound and UI design
     
