@@ -1,0 +1,29 @@
+[gd_scene format=3 uid="uid://6huud8ymwswi"]
+
+[node name="App" type="Node2D"]
+
+[node name="Camera2D" type="Camera2D" parent="."]
+anchor_mode = 0
+
+[node name="Control" type="Control" parent="."]
+layout_mode = 3
+anchors_preset = 0
+offset_right = 163.0
+offset_bottom = 269.0
+
+[node name="ProfilePanel" type="Container" parent="Control"]
+layout_mode = 0
+offset_right = 163.0
+offset_bottom = 80.0
+
+[node name="GraphPanel" type="Container" parent="Control"]
+layout_mode = 0
+offset_top = 110.0
+offset_right = 163.0
+offset_bottom = 176.0
+
+[node name="Container" type="Container" parent="Control"]
+layout_mode = 0
+offset_top = 230.0
+offset_right = 169.0
+offset_bottom = 270.0

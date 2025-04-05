@@ -14,6 +14,15 @@ config/name="MentalHealthApp"
 config/features=PackedStringArray("4.4", "Mobile")
 config/icon="res://icon.svg"
 
+[autoload]
+
+Director="*res://Utility/director.gd"
+
+[display]
+
+window/size/viewport_width=600
+window/size/viewport_height=270
+
 [rendering]
 
 renderer/rendering_method="mobile"

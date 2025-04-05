@@ -1,0 +1,8 @@
+[gd_scene load_steps=2 format=3 uid="uid://carnhj0plfd32"]
+
+[ext_resource type="Script" uid="uid://cr62lmhx7hl0p" path="res://UI/graph.gd" id="1_i6c4w"]
+
+[node name="Graph" type="Node2D"]
+script = ExtResource("1_i6c4w")
+
+[node name="CanvasLayer" type="CanvasLayer" parent="."]
