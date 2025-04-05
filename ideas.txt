@@ -1,0 +1,58 @@
+AI photo detection wrapper (calorie counter app)
+    Scan food/food labels
+
+Pokemon Go but good (encourages walking)
+    Upon installation, user is prompted with accessibility options
+    Much more fitness oriented; multiple objectives. Built for indoors or far more local locations
+        Difficulty in tracking said objectives, however.
+    Objectives:
+        Push ups
+        Squats
+        Sit ups
+        Walking to objectives far away
+        Chase objective
+    Internal director allocates a certain level of difficulty to each day.
+    Fake online fighting system?
+        As you get healthier, your avatar gets stronger and performs better in fights?
+
+
+
+Calorie burner counter w/ raspberry pi
+    https://youtu.be/T4Da2zv3v0c?si=rWfb8nv_3beL3Ej6
+    https://www.instructables.com/Simple-DIY-Pulse-Sensor/
+        Requires:
+            Infrared LED
+            Specific Capacitors
+            Raspberry pi
+        Pros:
+            Python backend, simple frontend
+            Really cool
+        Cons:
+            Rather complicated even with access to infrared LED
+    Paired with a phone app, hopefully is mostly digital
+    Upon installation, set target calorie defecit, optionally ask for current weight, desired weight, age, gender, height?
+    When pulse monitor is worn, track calories as a function of heartrate.
+    Otherwise, extrapolate caloric data with some distance function
+        
+
+    
+
+Mental health tracker
+    Uses:
+        Godot Engine for interface
+
+
+    Upon installing, requires you to enter your current mental improvement mediums
+        e.g. Reading, writing, personal projects, playing an instrument
+    User sets length of time they want to work on this each day
+    User sets times they are available during the day generally
+    During these allotted times, the app sends a notification to the user's phone, suggesting up to three possibilities (randomly selected)
+        Upon clicking the notification, the app opens to the options, you select the option and the app starts a 60 countdown, indicating that the user should get ready
+            Optional skip button for this countdown
+        When countdown ends, the app starts an invisible timer for the set length of time, and effectively "locks" the phone.
+            Emergency button towards the bottom, otherwise puts the phone in sleep if we can do so
+        When timer ends, track the progress in a roadmap style. Return phone to normal function.
+        Large "Completed a Task?" button to allow the user to add/remove tasks. Roadmap updates.
+    
+    General emphasis on sound and UI design
+    
