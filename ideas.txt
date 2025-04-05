@@ -35,6 +35,8 @@ Calorie burner counter w/ raspberry pi
     Otherwise, extrapolate caloric data with some distance function
     
 
+
+===================================================================={MAIN PLAN}====================================================================
 Mental health tracker
     Upon installing, requires you to enter your current mental improvement mediums
         e.g. Reading, writing, personal projects, playing an instrument
@@ -51,4 +53,4 @@ Mental health tracker
         Also shows a linear regression of projected happiness trained on dataset given the current "happiness variables".
         
     
-    General emphasis on sound and UI design
+    General emphasis on sound (if possible) and UI design
