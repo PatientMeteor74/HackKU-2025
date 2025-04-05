@@ -3,9 +3,9 @@ import pandas as pd
 import json, glob
 import matplotlib.pyplot as plt
 from sklearn.tree import DecisionTreeClassifier
-from sklearn.ensemble import RandomForestClassifier
+from sklearn.ensemble import RandomForestClassifier, RandomForestRegressor
 from sklearn.model_selection import train_test_split
-from sklearn.metrics import accuracy_score, f1_score
+from sklearn.metrics import accuracy_score, f1_score, mean_squared_error, r2_score
 from imblearn.under_sampling import RandomUnderSampler
 import joblib
 from sklearn.preprocessing import StandardScaler, OneHotEncoder
@@ -20,7 +20,20 @@ mood_dfs = []
 for file in mood_dfs_json:
     with open(file, 'r') as f:
         data = json.load(f)
+    
+    # Skip empty files
+    if not data:
+        print(f"Warning: Empty JSON file found: {file}")
+        continue
+        
     mood_df = pd.DataFrame(data)
+    
+    # Ensure all required columns exist
+    required_columns = ['happy', 'sad', 'happyornot', 'sadornot', 'location', 'resp_time']
+    for col in required_columns:
+        if col not in mood_df.columns:
+            print(f"Warning: Column {col} not found in {file}")
+            continue
     
     # Extract user ID from filename (e.g., "Mood_u00.json" -> "u00")
     uid = file.split('/')[-1].split('.')[0].split('_')[1]
@@ -38,8 +51,15 @@ for file in mood_dfs_json:
     
     # Process location data
     mood_df['has_location'] = mood_df['location'] != 'Unknown'
-    mood_df['latitude'] = mood_df['location'].apply(lambda x: float(x.split(',')[0]) if x != 'Unknown' else None)
-    mood_df['longitude'] = mood_df['location'].apply(lambda x: float(x.split(',')[1]) if x != 'Unknown' else None)
+    mood_df['latitude'] = mood_df['location'].apply(
+        lambda x: float(x.split(',')[0]) if isinstance(x, str) and x != 'Unknown' 
+        else float(x) if isinstance(x, (int, float)) 
+        else None
+    )
+    mood_df['longitude'] = mood_df['location'].apply(
+        lambda x: float(x.split(',')[1]) if isinstance(x, str) and x != 'Unknown' 
+        else None
+    )
     
     # Convert timestamp
     mood_df['datetime'] = pd.to_datetime(mood_df['resp_time'], unit='s')
@@ -54,6 +74,12 @@ activity_dfs = []
 for file in activity_dfs_json:
     with open(file, "r") as f:
         data = json.load(f)
+    
+    # Skip empty files
+    if not data:
+        print(f"Warning: Empty JSON file found: {file}")
+        continue
+        
     activity_df = pd.DataFrame(data)
     
     # Extract user ID from filename (e.g., "Activity_u00.json" -> "u00")
@@ -69,15 +95,32 @@ for file in activity_dfs_json:
     # Convert timestamp
     activity_df['datetime'] = pd.to_datetime(activity_df['resp_time'], unit='s')
     
-    # Create activity categories
-    activity_df['is_social'] = activity_df['Social2'].notna().astype(int)
-    activity_df['is_working'] = activity_df['working'].notna().astype(int)
-    activity_df['is_relaxing'] = activity_df['relaxing'].notna().astype(int)
+    # Process location data
+    if 'location' in activity_df.columns:
+        activity_df['has_location'] = ~activity_df['location'].isin(['Unknown', 'null'])
+        activity_df['latitude'] = activity_df['location'].apply(
+            lambda x: float(x.split(',')[0]) if isinstance(x, str) and x not in ['Unknown', 'null'] and ',' in x
+            else float(x) if isinstance(x, (int, float)) 
+            else None
+        )
+        activity_df['longitude'] = activity_df['location'].apply(
+            lambda x: float(x.split(',')[1]) if isinstance(x, str) and x not in ['Unknown', 'null'] and ',' in x
+            else None
+        )
+    else:
+        activity_df['has_location'] = False
+        activity_df['latitude'] = None
+        activity_df['longitude'] = None
     
-    # Create activity intensity scores
-    activity_df['social_intensity'] = activity_df['Social2'].fillna(0)
-    activity_df['work_intensity'] = activity_df['working'].fillna(0)
-    activity_df['relax_intensity'] = activity_df['relaxing'].fillna(0)
+    # Create activity categories with safe column access
+    activity_df['is_social'] = activity_df['Social2'].notna().astype(int) if 'Social2' in activity_df.columns else 0
+    activity_df['is_working'] = activity_df['working'].notna().astype(int) if 'working' in activity_df.columns else 0
+    activity_df['is_relaxing'] = activity_df['relaxing'].notna().astype(int) if 'relaxing' in activity_df.columns else 0
+    
+    # Create activity intensity scores with safe column access
+    activity_df['social_intensity'] = activity_df['Social2'].fillna(0) if 'Social2' in activity_df.columns else 0
+    activity_df['work_intensity'] = activity_df['working'].fillna(0) if 'working' in activity_df.columns else 0
+    activity_df['relax_intensity'] = activity_df['relaxing'].fillna(0) if 'relaxing' in activity_df.columns else 0
     
     # Calculate total activity score
     activity_df['total_activity_score'] = (
@@ -96,6 +139,12 @@ sleep_dfs = []
 for file in sleep_dfs_json:
     with open(file, "r") as f:
         data = json.load(f)
+    
+    # Skip empty files
+    if not data:
+        print(f"Warning: Empty JSON file found: {file}")
+        continue
+        
     sleep_df = pd.DataFrame(data)
     
     # Extract user ID from filename (e.g., "Sleep_u00.json" -> "u00")
@@ -109,9 +158,16 @@ for file in sleep_dfs_json:
             sleep_df[col] = pd.to_numeric(sleep_df[col], errors='coerce')
     
     # Process location data
-    sleep_df['has_location'] = sleep_df['location'].notna()
-    sleep_df['latitude'] = sleep_df['location'].apply(lambda x: float(x.split(',')[0]) if pd.notna(x) else None)
-    sleep_df['longitude'] = sleep_df['location'].apply(lambda x: float(x.split(',')[1]) if pd.notna(x) else None)
+    sleep_df['has_location'] = sleep_df['location'] != 'Unknown'
+    sleep_df['latitude'] = sleep_df['location'].apply(
+        lambda x: float(x.split(',')[0]) if isinstance(x, str) and x != 'Unknown' 
+        else float(x) if isinstance(x, (int, float)) 
+        else None
+    )
+    sleep_df['longitude'] = sleep_df['location'].apply(
+        lambda x: float(x.split(',')[1]) if isinstance(x, str) and x != 'Unknown' 
+        else None
+    )
     
     # Convert timestamp
     sleep_df['datetime'] = pd.to_datetime(sleep_df['resp_time'], unit='s')
@@ -159,7 +215,7 @@ phq9_response_mapping = {
 # Apply the mapping to each column
 for col in phq9_data.columns[2:-1]:  # Assuming Response is the last column
     phq9_data[col] = phq9_data[col].map(phq9_mapping) / 3
-phq9_data.columns[-1] = phq9_data.columns[-1].map(phq9_response_mapping) / 3
+phq9_data['Response'] = phq9_data['Response'].map(phq9_response_mapping) / 3
 
 # Create time-based features
 mood_data['hour'] = mood_data['datetime'].dt.hour
@@ -261,15 +317,21 @@ X_train_scaled = scaler.fit_transform(X_train)
 X_test_scaled = scaler.transform(X_test)
 
 # Train model
-model = RandomForestClassifier(n_estimators=300, max_depth=7)
+model = RandomForestRegressor(n_estimators=300, max_depth=7)
 model.fit(X_train_scaled, y_train)
 
 # Evaluate model
-train_score = model.score(X_train_scaled, y_train)
-test_score = model.score(X_test_scaled, y_test)
+y_train_pred = model.predict(X_train_scaled)
+y_test_pred = model.predict(X_test_scaled)
+train_score = r2_score(y_train, y_train_pred)
+test_score = r2_score(y_test, y_test_pred)
+train_rmse = np.sqrt(mean_squared_error(y_train, y_train_pred))
+test_rmse = np.sqrt(mean_squared_error(y_test, y_test_pred))
 
-print(f"Training R² score: {train_score:.4f}")
-print(f"Testing R² score: {test_score:.4f}")
+print(f"Training R^2 score: {train_score:.4f}")
+print(f"Testing R^2 score: {test_score:.4f}")
+print(f"Training RMSE: {train_rmse:.4f}")
+print(f"Testing RMSE: {test_rmse:.4f}")
 
 # Save model and scaler
 joblib.dump(model, 'mood_prediction_model.joblib')
