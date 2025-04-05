@@ -308,7 +308,7 @@ features = [
 X = merged_data[features].fillna(0)
 y = merged_data['mood_improvement'].fillna(0)
 
-# Split data
+# Split data to test trained data against untrained data
 X_train, X_test, y_train, y_test = train_test_split(X, y, test_size=0.1, random_state=42)
 
 # Scale features
@@ -327,11 +327,14 @@ train_score = r2_score(y_train, y_train_pred)
 test_score = r2_score(y_test, y_test_pred)
 train_rmse = np.sqrt(mean_squared_error(y_train, y_train_pred))
 test_rmse = np.sqrt(mean_squared_error(y_test, y_test_pred))
+test_y_intercept = model.intercept_
+test_m = model.coef_
 
 print(f"Training R^2 score: {train_score}")
 print(f"Testing R^2 score: {test_score}")
 print(f"Training RMSE: {train_rmse}")
 print(f"Testing RMSE: {test_rmse}")
+print(f"Model Function: f(x) = {test_m}X + {test_y_intercept}")
 
 # Save model and scaler
 joblib.dump(model, 'mood_prediction_model.joblib')
