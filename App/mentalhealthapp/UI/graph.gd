@@ -91,7 +91,27 @@ func get_graph_data():
 			# Convert timestamp to readable date
 			var datetime = Time.get_datetime_dict_from_unix_time(entry.timestamp)
 			var day_names = ["Sun", "Mon", "Tue", "Wed", "Thu", "Fri", "Sat"]
-			var day_name = day_names[datetime.weekday]
+			
+			# Get the correct weekday (0-6, Sunday-Saturday)
+			# Use the correct field from datetime dictionary
+			var weekday = datetime.weekday if datetime.has("weekday") else 0
+			
+			# If weekday is not available, calculate it using Zeller's congruence
+			if !datetime.has("weekday"):
+				var day = datetime.day
+				var month = datetime.month
+				var year = datetime.year
+				
+				# Adjust month and year for Zeller's formula
+				if month < 3:
+					month += 12
+					year -= 1
+				
+				var h = (day + int((13 * (month + 1)) / 5) + year + int(year / 4) - int(year / 100) + int(year / 400)) % 7
+				# Convert h (0=Saturday, 1=Sunday, ...) to our format (0=Sunday, ..., 6=Saturday)
+				weekday = (h + 1) % 7
+			
+			var day_name = day_names[weekday]
 			data.dates.append(day_name)
 	
 	return data
