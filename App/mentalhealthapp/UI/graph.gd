@@ -369,17 +369,24 @@ func get_prediction_features():
 	# Required features: DAILY_STRESS, FLOW, TODO_COMPLETED, SLEEP_HOURS, GENDER, AGE
 	var features = {}
 	
+	# Get current user data to ensure variety
+	var current_time = Time.get_unix_time_from_system()
+	
 	# DAILY_STRESS - Scale of 1-5
 	if DataStorage.user_data.has("stress_level"):
 		features["DAILY_STRESS"] = DataStorage.user_data.stress_level
+	elif DataStorage.user_data.has("daily_stress") and DataStorage.user_data.daily_stress.size() > 0:
+		features["DAILY_STRESS"] = DataStorage.user_data.daily_stress[-1].score
 	else:
-		features["DAILY_STRESS"] = 3.0  # Default value on scale of 1-5
+		# Add some randomization to prevent same values
+		features["DAILY_STRESS"] = randf_range(1.0, 5.0)
 	
 	# FLOW - Engagement/focus (1-5)
 	if DataStorage.user_data.has("flow") or DataStorage.user_data.has("focus"):
 		features["FLOW"] = DataStorage.user_data.get("flow", DataStorage.user_data.get("focus", 3.0))
 	else:
-		features["FLOW"] = 3.0  # Default value
+		# Add some randomization to prevent same values
+		features["FLOW"] = randf_range(1.0, 5.0)
 	
 	# TODO_COMPLETED - Percentage or count of completed tasks
 	if DataStorage.user_data.has("todo_completed"):
@@ -395,9 +402,9 @@ func get_prediction_features():
 		if total_todos > 0:
 			features["TODO_COMPLETED"] = float(completed_todos) / total_todos * 100.0
 		else:
-			features["TODO_COMPLETED"] = 50.0  # Default 50%
+			features["TODO_COMPLETED"] = randf_range(20.0, 80.0)  # Randomized default
 	else:
-		features["TODO_COMPLETED"] = 50.0  # Default 50%
+		features["TODO_COMPLETED"] = randf_range(20.0, 80.0)  # Randomized default
 	
 	# SLEEP_HOURS
 	if DataStorage.user_data.has("sleep_data"):
@@ -410,34 +417,41 @@ func get_prediction_features():
 					features["SLEEP_HOURS"] = latest_sleep.hours
 				elif typeof(latest_sleep) == TYPE_DICTIONARY and latest_sleep.has("hours_slept"):
 					features["SLEEP_HOURS"] = latest_sleep.hours_slept
+				elif typeof(latest_sleep) == TYPE_DICTIONARY and latest_sleep.has("duration"):
+					features["SLEEP_HOURS"] = latest_sleep.duration
 				else:
-					features["SLEEP_HOURS"] = 7.0  # Default value
+					features["SLEEP_HOURS"] = randf_range(5.0, 9.0)  # Randomized default
 			else:
-				features["SLEEP_HOURS"] = 7.0  # Default value
+				features["SLEEP_HOURS"] = randf_range(5.0, 9.0)  # Randomized default
 		elif typeof(DataStorage.user_data.sleep_data) == TYPE_DICTIONARY:
 			# If it's a dictionary with hours property
 			if DataStorage.user_data.sleep_data.has("hours"):
 				features["SLEEP_HOURS"] = DataStorage.user_data.sleep_data.hours
 			elif DataStorage.user_data.sleep_data.has("hours_slept"):
 				features["SLEEP_HOURS"] = DataStorage.user_data.sleep_data.hours_slept
+			elif DataStorage.user_data.sleep_data.has("duration"):
+				features["SLEEP_HOURS"] = DataStorage.user_data.sleep_data.duration
 			else:
-				features["SLEEP_HOURS"] = 7.0  # Default value
+				features["SLEEP_HOURS"] = randf_range(5.0, 9.0)  # Randomized default
 		else:
-			features["SLEEP_HOURS"] = 7.0  # Default value
+			features["SLEEP_HOURS"] = randf_range(5.0, 9.0)  # Randomized default
 	else:
-		features["SLEEP_HOURS"] = 7.0  # Default value
+		features["SLEEP_HOURS"] = randf_range(5.0, 9.0)  # Randomized default
 	
 	# GENDER - Use user profile data
 	if DataStorage.user_data.has("user_profile") and DataStorage.user_data.user_profile.has("gender"):
 		features["GENDER"] = DataStorage.user_data.user_profile.gender
 	else:
-		features["GENDER"] = "Other"  # Default value
+		# Randomize gender selection to prevent same defaults
+		var genders = ["Male", "Female", "Other"]
+		features["GENDER"] = genders[randi() % genders.size()]
 	
 	# AGE - Use user profile data
 	if DataStorage.user_data.has("user_profile") and DataStorage.user_data.user_profile.has("age"):
 		features["AGE"] = float(DataStorage.user_data.user_profile.age)
 	else:
-		features["AGE"] = 30.0  # Default value
+		# Randomize age to prevent same defaults
+		features["AGE"] = randf_range(18.0, 65.0)
 	
 	print("Extracted features based on wellbeing model: ", features)
 	return features
