@@ -8,19 +8,22 @@ import joblib
 from sklearn.preprocessing import StandardScaler, OneHotEncoder, MinMaxScaler
 from sklearn.compose import ColumnTransformer
 from sklearn.pipeline import Pipeline
+from sklearn.impute import SimpleImputer
 
-path = "C:/Users/johnj/Documents/HackKU-2025/ML/data/" 
+path = "/home/johnplatkowski/Documents/Projects/HackKU-2025/ML/data/    " 
 
 # Load data
 df = pd.read_csv(path + "Wellbeing_and_lifestyle_data_Kaggle.csv")
 df_selected = df[["Timestamp", "DAILY_STRESS", "FLOW", "TODO_COMPLETED", "SLEEP_HOURS", "GENDER", "AGE", "WORK_LIFE_BALANCE_SCORE"]]
 
-# Prepare data for training
-df_selected_nonan = df_selected.dropna()
 
-# Drop Timestamp column and target variable
-X = df_selected_nonan.drop(columns=["WORK_LIFE_BALANCE_SCORE", "Timestamp"])
-y = df_selected_nonan["WORK_LIFE_BALANCE_SCORE"]
+X = df_selected.drop(columns=["WORK_LIFE_BALANCE_SCORE", "Timestamp"])
+y = df_selected["WORK_LIFE_BALANCE_SCORE"].copy()
+
+# Handle missing values in target
+mask = ~y.isna()
+X = X[mask]
+y = y[mask]
 
 # Scale the target variable to 0-1 range
 y_scaler = MinMaxScaler()
@@ -30,11 +33,21 @@ y_scaled = y_scaler.fit_transform(y.values.reshape(-1, 1)).flatten()
 categorical_cols = X.select_dtypes(include=['object', 'category']).columns.tolist()
 numeric_cols = X.select_dtypes(include=['int64', 'float64']).columns.tolist()
 
-# Create preprocessing pipeline
+# Create preprocessing pipeline with imputation for missing values
+numeric_transformer = Pipeline(steps=[
+    ('imputer', SimpleImputer(strategy='mean')),
+    ('scaler', StandardScaler())
+])
+
+categorical_transformer = Pipeline(steps=[
+    ('imputer', SimpleImputer(strategy='most_frequent')),
+    ('onehot', OneHotEncoder(handle_unknown='ignore'))
+])
+
 preprocessor = ColumnTransformer(
     transformers=[
-        ('num', StandardScaler(), numeric_cols),
-        ('cat', OneHotEncoder(handle_unknown='ignore'), categorical_cols)
+        ('num', numeric_transformer, numeric_cols),
+        ('cat', categorical_transformer, categorical_cols)
     ]
 )
 

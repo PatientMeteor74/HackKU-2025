@@ -40,45 +40,27 @@ def do_mood_prediction(input_data=None):
         except:
             scaler = None
         
-        # Create a complete dataframe with all expected columns and reasonable defaults
+        # Create a dataframe with only the required features
+        # The model's pipeline will handle missing values through imputation
         df = pd.DataFrame([{
-            # Features we have from input
-            "DAILY_STRESS": float(input_data.get("DAILY_STRESS", 3.0)),
-            "FLOW": float(input_data.get("FLOW", 3.0)),
-            "TODO_COMPLETED": float(input_data.get("TODO_COMPLETED", 50.0)),
-            "SLEEP_HOURS": float(input_data.get("SLEEP_HOURS", 7.0)),
-            "GENDER": str(input_data.get("GENDER", "Male")),
-            "AGE": str(input_data.get("AGE", "20 to 35")),  # Convert to string category
-            
-            # Other required columns with reasonable defaults
-            "Timestamp": "4/6/24",  # Today's date
-            "FRUITS_VEGGIES": 3.0,  # Average value
-            "PLACES_VISITED": 2.0,  # Average value
-            "CORE_CIRCLE": 5.0,  # Average value
-            "SUPPORTING_OTHERS": 3.0,  # Average value
-            "SOCIAL_NETWORK": 3.0,  # Average value
-            "ACHIEVEMENT": 3.0,  # Average value
-            "DONATION": 1.0,  # Average value
-            "BMI_RANGE": 2.0,  # Average value
-            "DAILY_STEPS": 5000.0,  # Average value
-            "LIVE_VISION": 1.0,  # Average value
-            "LOST_VACATION": 3.0,  # Average value
-            "DAILY_SHOUTING": 2.0,  # Average value
-            "SUFFICIENT_INCOME": 1.0,  # Average value
-            "PERSONAL_AWARDS": 2.0,  # Average value
-            "TIME_FOR_PASSION": 1.0,  # Average value
-            "WEEKLY_MEDITATION": 2.0  # Average value
+            "DAILY_STRESS": float(input_data.get("DAILY_STRESS")) if "DAILY_STRESS" in input_data else None,
+            "FLOW": float(input_data.get("FLOW")) if "FLOW" in input_data else None,
+            "TODO_COMPLETED": float(input_data.get("TODO_COMPLETED")) if "TODO_COMPLETED" in input_data else None,
+            "SLEEP_HOURS": float(input_data.get("SLEEP_HOURS")) if "SLEEP_HOURS" in input_data else None,
+            "GENDER": str(input_data.get("GENDER")) if "GENDER" in input_data else None,
+            "AGE": input_data.get("AGE") if "AGE" in input_data else None
         }])
 
-        # Handle AGE as a category
-        if isinstance(df["AGE"].iloc[0], (int, float)) and df["AGE"].iloc[0] < 20:
-            df["AGE"] = "Under 20"
-        elif isinstance(df["AGE"].iloc[0], (int, float)) and df["AGE"].iloc[0] < 35:
-            df["AGE"] = "20 to 35"
-        elif isinstance(df["AGE"].iloc[0], (int, float)) and df["AGE"].iloc[0] < 50:
-            df["AGE"] = "36 to 50"
-        elif isinstance(df["AGE"].iloc[0], (int, float)):
-            df["AGE"] = "Above 50"
+        # Handle AGE as a category if it's numeric
+        if isinstance(df["AGE"].iloc[0], (int, float)) and df["AGE"].iloc[0] is not None:
+            if df["AGE"].iloc[0] < 20:
+                df["AGE"] = "Under 20"
+            elif df["AGE"].iloc[0] < 35:
+                df["AGE"] = "20 to 35"
+            elif df["AGE"].iloc[0] < 50:
+                df["AGE"] = "36 to 50"
+            else:
+                df["AGE"] = "Above 50"
         
         # Make prediction using the original model
         try:
