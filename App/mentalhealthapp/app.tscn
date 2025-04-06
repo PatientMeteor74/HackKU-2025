@@ -32,27 +32,29 @@ anchor_right = 1.0
 anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
-text = "Profile"
+text = "Happiness Forecast
+"
 horizontal_alignment = 1
 vertical_alignment = 1
 
 [node name="CentralPanel" type="Panel" parent="Control"]
 layout_mode = 1
-anchors_preset = 15
+anchors_preset = -1
+anchor_top = 0.109
 anchor_right = 1.0
-anchor_bottom = 1.0
-offset_top = 70.0
-offset_bottom = -70.0
+anchor_bottom = 0.891
+offset_top = 0.239998
+offset_bottom = -0.23999
 grow_horizontal = 2
 grow_vertical = 2
 
 [node name="PageSelect" type="Panel" parent="Control"]
 layout_mode = 1
-anchors_preset = 12
-anchor_top = 1.0
+anchors_preset = -1
+anchor_top = 0.906
 anchor_right = 1.0
 anchor_bottom = 1.0
-offset_top = -60.0
+offset_top = 0.159973
 grow_horizontal = 2
 grow_vertical = 0
 
