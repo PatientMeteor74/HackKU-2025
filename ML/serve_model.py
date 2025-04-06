@@ -28,47 +28,142 @@ def do_mood_prediction(input_data=None):
         ml_dir = os.path.dirname(__file__)
         project_root = os.path.dirname(ml_dir)
         
-        # Use the dummy model that works with 6 features
-        model_path = os.path.join(project_root, "dummy_model.joblib")
+        # Set paths to model files
+        model_path = os.path.join(project_root, "mood_prediction_model.joblib")
+        scaler_path = os.path.join(project_root, "target_scaler.joblib")
         
-        # Load model
+        # Load model and scaler
         model = joblib.load(model_path)
         
-        # Extract features and convert to numeric array
-        features = np.array([
-            float(input_data.get("DAILY_STRESS", 0)),
-            float(input_data.get("FLOW", 0)),
-            float(input_data.get("TODO_COMPLETED", 0)),
-            float(input_data.get("SLEEP_HOURS", 0)),
-            1.0 if str(input_data.get("GENDER", "")).lower() == "male" else 0.0,
-            float(input_data.get("AGE", 0))
-        ]).reshape(1, -1)
+        try:
+            scaler = joblib.load(scaler_path)
+        except:
+            scaler = None
         
-        # Make prediction
-        prediction = model.predict(features)
+        # Create a complete dataframe with all expected columns and reasonable defaults
+        df = pd.DataFrame([{
+            # Features we have from input
+            "DAILY_STRESS": float(input_data.get("DAILY_STRESS", 3.0)),
+            "FLOW": float(input_data.get("FLOW", 3.0)),
+            "TODO_COMPLETED": float(input_data.get("TODO_COMPLETED", 50.0)),
+            "SLEEP_HOURS": float(input_data.get("SLEEP_HOURS", 7.0)),
+            "GENDER": str(input_data.get("GENDER", "Male")),
+            "AGE": str(input_data.get("AGE", "20 to 35")),  # Convert to string category
+            
+            # Other required columns with reasonable defaults
+            "Timestamp": "4/6/24",  # Today's date
+            "FRUITS_VEGGIES": 3.0,  # Average value
+            "PLACES_VISITED": 2.0,  # Average value
+            "CORE_CIRCLE": 5.0,  # Average value
+            "SUPPORTING_OTHERS": 3.0,  # Average value
+            "SOCIAL_NETWORK": 3.0,  # Average value
+            "ACHIEVEMENT": 3.0,  # Average value
+            "DONATION": 1.0,  # Average value
+            "BMI_RANGE": 2.0,  # Average value
+            "DAILY_STEPS": 5000.0,  # Average value
+            "LIVE_VISION": 1.0,  # Average value
+            "LOST_VACATION": 3.0,  # Average value
+            "DAILY_SHOUTING": 2.0,  # Average value
+            "SUFFICIENT_INCOME": 1.0,  # Average value
+            "PERSONAL_AWARDS": 2.0,  # Average value
+            "TIME_FOR_PASSION": 1.0,  # Average value
+            "WEEKLY_MEDITATION": 2.0  # Average value
+        }])
+
+        # Handle AGE as a category
+        if isinstance(df["AGE"].iloc[0], (int, float)) and df["AGE"].iloc[0] < 20:
+            df["AGE"] = "Under 20"
+        elif isinstance(df["AGE"].iloc[0], (int, float)) and df["AGE"].iloc[0] < 35:
+            df["AGE"] = "20 to 35"
+        elif isinstance(df["AGE"].iloc[0], (int, float)) and df["AGE"].iloc[0] < 50:
+            df["AGE"] = "36 to 50"
+        elif isinstance(df["AGE"].iloc[0], (int, float)):
+            df["AGE"] = "Above 50"
         
-        # The dummy model returns a hardcoded prediction, 
-        # but for demonstration purposes, we'll scale it between 0 and 10
-        # to represent a well-being score
-        min_score = 0.0
-        max_score = 10.0
-        scaled_prediction = min_score + (max_score - min_score) * float(prediction[0])
-        
-        # Add message based on prediction value
-        message = ""
-        if scaled_prediction < 3:
-            message = "Your predicted well-being score is low. Consider implementing stress reduction techniques."
-        elif scaled_prediction < 7:
-            message = "Your predicted well-being score is moderate. You're doing okay, but there's room for improvement."
-        else:
-            message = "Your predicted well-being score is high. Keep up the good work!"
-        
-        # Return result
-        return json.dumps({
-            "prediction": float(scaled_prediction),
-            "message": message,
-            "status": "success"
-        })
+        # Make prediction using the original model
+        try:
+            prediction = model.predict(df)
+            
+            # Scale back to original range if needed
+            if scaler:
+                prediction = scaler.inverse_transform(prediction.reshape(-1, 1)).flatten()
+            
+            # Raw score from model (typically in 200-800 range)
+            raw_score = float(prediction[0])
+            
+            # Normalize to 0-5 scale
+            # Assuming dataset range of 200-800
+            min_score = 200
+            max_score = 800
+            normalized_score = 5 * (raw_score - min_score) / (max_score - min_score)
+            normalized_score = max(0, min(5, normalized_score))  # Ensure it's in range 0-5
+            
+            # Return prediction as JSON
+            message = ""
+            if normalized_score < 1.5:
+                message = "Your predicted well-being score is low. Consider reducing stress and improving sleep."
+            elif normalized_score < 3.5:
+                message = "Your predicted well-being score is moderate. You're doing okay, but there's room for improvement."
+            else:
+                message = "Your predicted well-being score is high. Keep up the good work!"
+                
+            return json.dumps({
+                "prediction": round(normalized_score, 2),
+                "raw_score": round(raw_score, 2),
+                "message": message,
+                "status": "success"
+            })
+            
+        except Exception as e:
+            # If model prediction fails, fall back to our custom calculation
+            daily_stress = float(input_data.get("DAILY_STRESS", 0))
+            flow = float(input_data.get("FLOW", 0))
+            todo_completed = float(input_data.get("TODO_COMPLETED", 0))
+            sleep_hours = float(input_data.get("SLEEP_HOURS", 0))
+            
+            # Stress reduces well-being (inverse relationship)
+            stress_component = max(0, 10 - daily_stress * 2)
+            
+            # Flow state is good for well-being
+            flow_component = flow * 2
+            
+            # Completing tasks is good for well-being
+            todo_component = todo_completed / 10
+            
+            # Sleep is critical for well-being
+            if sleep_hours < 5:
+                sleep_component = sleep_hours * 1.5
+            elif sleep_hours <= 8:
+                sleep_component = 7.5 + (sleep_hours - 5) * 0.5
+            else:
+                sleep_component = 9 - (sleep_hours - 8) * 0.5
+            
+            # Calculate weighted score (0-10 scale)
+            raw_score = (
+                stress_component * 0.35 +
+                flow_component * 0.25 +
+                todo_component * 0.15 +
+                sleep_component * 0.25
+            )
+            
+            # Normalize to 0-5 scale
+            normalized_score = raw_score * 0.5
+            
+            # Add message based on prediction value
+            message = ""
+            if normalized_score < 1.5:
+                message = "Your predicted well-being score is low. Consider reducing stress and improving sleep."
+            elif normalized_score < 3.5:
+                message = "Your predicted well-being score is moderate. You're doing okay, but there's room for improvement."
+            else:
+                message = "Your predicted well-being score is high. Keep up the good work!"
+                
+            return json.dumps({
+                "prediction": round(normalized_score, 2),
+                "message": message,
+                "status": "success",
+                "note": "Fallback calculation used due to error: " + str(e)
+            })
     
     except Exception as e:
         return json.dumps({"error": str(e)})
