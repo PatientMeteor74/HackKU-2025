@@ -84,6 +84,10 @@ func add_todo_item(todo, index):
 	var checkbox = CheckBox.new()
 	checkbox.button_pressed = false
 	checkbox.connect("toggled", Callable(self, "_on_todo_toggled").bind(index))
+	checkbox.add_theme_color_override("font_color", Color(0, 0, 1))
+	checkbox.add_theme_color_override("font_color_pressed", Color(0, 0, 1))
+	checkbox.add_theme_color_override("icon_normal_color", Color(0, 0, 1))
+	checkbox.add_theme_color_override("icon_pressed_color", Color(0, 0, 1))
 	hbox.add_child(checkbox)
 	
 	var todo_info = VBoxContainer.new()
