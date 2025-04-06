@@ -9,10 +9,23 @@ const BACKGROUND_COLOR = Color("#474747")
 const LINE_COLOR = Color("#4285F4")
 const POINT_COLOR = Color("#DB4437")
 const GRID_COLOR = Color("#9AA0A6")
+const PREDICTION_COLOR = Color("#0F9D58")  # Green for prediction
+
+# Mood predictor
+var mood_predictor = null
+var prediction_value = null
+var show_prediction = false
 
 func _ready() -> void:
 	DataStorage.connect("data_updated", Callable(self, "_on_data_updated"))
+	
+	# Initialize the mood predictor
+	mood_predictor = MoodPredictor.new()
+	add_child(mood_predictor)
+	mood_predictor.connect("prediction_completed", Callable(self, "_on_prediction_completed"))
+	
 	create_graph()
+	add_prediction_button()
 
 func _process(delta) -> void:
 	pass
@@ -112,6 +125,11 @@ func _draw_graph(control, data):
 	
 	var min_value = values.min()
 	var max_value = values.max()
+	
+	# Include prediction in min/max calculation if available
+	if show_prediction and prediction_value != null:
+		min_value = min(min_value, prediction_value)
+		max_value = max(max_value, prediction_value)
 
 	if max_value == min_value:
 		min_value = max(0, min_value - 1)
@@ -161,6 +179,24 @@ func _draw_graph(control, data):
 		var x_pos = padding.x + i * x_scale
 		var y_pos = size.y - padding.y - (values[i] - min_value) * y_scale
 		control.draw_circle(Vector2(x_pos, y_pos), 4, POINT_COLOR)
+	
+	# Draw prediction point and line if available
+	if show_prediction and prediction_value != null:
+		var last_x = padding.x + (values.size() - 1) * x_scale
+		var last_y = size.y - padding.y - (values[values.size() - 1] - min_value) * y_scale
+		var pred_x = padding.x + values.size() * x_scale
+		var pred_y = size.y - padding.y - (prediction_value - min_value) * y_scale
+		
+		# Draw dashed line to prediction (future)
+		control.draw_dashed_line(Vector2(last_x, last_y), Vector2(pred_x, pred_y), PREDICTION_COLOR, 2.0)
+		
+		# Draw prediction point
+		control.draw_circle(Vector2(pred_x, pred_y), 5, PREDICTION_COLOR)
+		
+		# Add "Predicted" label
+		var font = control.get_theme_default_font()
+		var font_size = control.get_theme_default_font_size()
+		control.draw_string(font, Vector2(pred_x - 15, pred_y - 12), "Predicted", HORIZONTAL_ALIGNMENT_CENTER, -1, font_size)
 
 func add_summary_statistics(data):
 	if data.mood_values.size() == 0:
@@ -206,6 +242,13 @@ func add_summary_statistics(data):
 	entries_label.text = "Entries: " + str(data.mood_values.size())
 	stats_container.add_child(entries_label)
 	
+	# Show prediction if available
+	if show_prediction and prediction_value != null:
+		var pred_label = Label.new()
+		pred_label.text = "Predicted Mood: " + str(prediction_value).substr(0, 4)
+		pred_label.add_theme_color_override("font_color", PREDICTION_COLOR)
+		stats_container.add_child(pred_label)
+	
 	graph_container.add_child(stats_container)
 
 func create_visual_graph_old(data):
@@ -232,3 +275,149 @@ func create_visual_graph_old(data):
 		graph.add_child(entry)
 	
 	return graph
+
+func add_prediction_button():
+	var predict_button = Button.new()
+	predict_button.text = "Predict Future Mood"
+	predict_button.connect("pressed", Callable(self, "_on_predict_button_pressed"))
+	graph_container.add_child(predict_button)
+
+func _on_predict_button_pressed():
+	# Get user's data as input features
+	# This will depend on what features your model expects
+	var features = get_prediction_features()
+	
+	# Call the prediction function
+	print("Requesting mood prediction with features:", features)
+	mood_predictor.predict_mood(features)
+
+func _on_prediction_completed(result):
+	print("Prediction completed:", result)
+	
+	# Remove any previous error messages
+	for child in graph_container.get_children():
+		if child is Label and child.text.begins_with("Prediction failed:"):
+			child.queue_free()
+	
+	if result is Dictionary:
+		if result.has("prediction") and result.has("status") and result.status == "success":
+			prediction_value = result.prediction
+			show_prediction = true
+			# Update graph to show prediction
+			create_graph()
+		elif result.has("error"):
+			# Show error message
+			var error_message = result.get("message", str(result.error))
+			var error_label = Label.new()
+			error_label.text = "Prediction failed: " + error_message
+			error_label.add_theme_color_override("font_color", Color.RED)
+			graph_container.add_child(error_label)
+	elif result is String:
+		# Try to parse the result as JSON if it's a string
+		var json = JSON.new()
+		var error = json.parse(result)
+		
+		if error == OK:
+			var parsed_result = json.data
+			if typeof(parsed_result) == TYPE_DICTIONARY:
+				if parsed_result.has("prediction") and parsed_result.has("status") and parsed_result.status == "success":
+					prediction_value = parsed_result.prediction
+					show_prediction = true
+					# Update graph to show prediction
+					create_graph()
+				elif parsed_result.has("error"):
+					# Show error message
+					var error_label = Label.new()
+					error_label.text = "Prediction failed: " + str(parsed_result.error)
+					error_label.add_theme_color_override("font_color", Color.RED)
+					graph_container.add_child(error_label)
+		else:
+			# Show that we couldn't parse the result
+			var error_label = Label.new()
+			error_label.text = "Prediction failed: Could not parse result - " + result
+			error_label.add_theme_color_override("font_color", Color.RED)
+			graph_container.add_child(error_label)
+	else:
+		# Show a generic error for any other type
+		var error_label = Label.new()
+		error_label.text = "Prediction failed: Unexpected result type"
+		error_label.add_theme_color_override("font_color", Color.RED)
+		graph_container.add_child(error_label)
+
+func get_prediction_features():
+	# Extract features from user data based on wellbeing_train.py
+	# Required features: DAILY_STRESS, FLOW, TODO_COMPLETED, SLEEP_HOURS, GENDER, AGE
+	var features = {}
+	
+	# DAILY_STRESS - Scale of 1-5
+	if DataStorage.user_data.has("stress_level"):
+		features["DAILY_STRESS"] = DataStorage.user_data.stress_level
+	else:
+		features["DAILY_STRESS"] = 3.0  # Default value on scale of 1-5
+	
+	# FLOW - Engagement/focus (1-5)
+	if DataStorage.user_data.has("flow") or DataStorage.user_data.has("focus"):
+		features["FLOW"] = DataStorage.user_data.get("flow", DataStorage.user_data.get("focus", 3.0))
+	else:
+		features["FLOW"] = 3.0  # Default value
+	
+	# TODO_COMPLETED - Percentage or count of completed tasks
+	if DataStorage.user_data.has("todo_completed"):
+		features["TODO_COMPLETED"] = DataStorage.user_data.todo_completed
+	elif DataStorage.user_data.has("todo_list") and typeof(DataStorage.user_data.todo_list) == TYPE_ARRAY:
+		# Calculate percentage of completed todos
+		var total_todos = DataStorage.user_data.todo_list.size()
+		var completed_todos = 0
+		for todo in DataStorage.user_data.todo_list:
+			if typeof(todo) == TYPE_DICTIONARY and todo.has("completed") and todo.completed:
+				completed_todos += 1
+		
+		if total_todos > 0:
+			features["TODO_COMPLETED"] = float(completed_todos) / total_todos * 100.0
+		else:
+			features["TODO_COMPLETED"] = 50.0  # Default 50%
+	else:
+		features["TODO_COMPLETED"] = 50.0  # Default 50%
+	
+	# SLEEP_HOURS
+	if DataStorage.user_data.has("sleep_data"):
+		# Check the type and access appropriately
+		if typeof(DataStorage.user_data.sleep_data) == TYPE_ARRAY:
+			# If it's an array, use the latest entry
+			if DataStorage.user_data.sleep_data.size() > 0:
+				var latest_sleep = DataStorage.user_data.sleep_data.back()
+				if typeof(latest_sleep) == TYPE_DICTIONARY and latest_sleep.has("hours"):
+					features["SLEEP_HOURS"] = latest_sleep.hours
+				elif typeof(latest_sleep) == TYPE_DICTIONARY and latest_sleep.has("hours_slept"):
+					features["SLEEP_HOURS"] = latest_sleep.hours_slept
+				else:
+					features["SLEEP_HOURS"] = 7.0  # Default value
+			else:
+				features["SLEEP_HOURS"] = 7.0  # Default value
+		elif typeof(DataStorage.user_data.sleep_data) == TYPE_DICTIONARY:
+			# If it's a dictionary with hours property
+			if DataStorage.user_data.sleep_data.has("hours"):
+				features["SLEEP_HOURS"] = DataStorage.user_data.sleep_data.hours
+			elif DataStorage.user_data.sleep_data.has("hours_slept"):
+				features["SLEEP_HOURS"] = DataStorage.user_data.sleep_data.hours_slept
+			else:
+				features["SLEEP_HOURS"] = 7.0  # Default value
+		else:
+			features["SLEEP_HOURS"] = 7.0  # Default value
+	else:
+		features["SLEEP_HOURS"] = 7.0  # Default value
+	
+	# GENDER - Use user profile data
+	if DataStorage.user_data.has("user_profile") and DataStorage.user_data.user_profile.has("gender"):
+		features["GENDER"] = DataStorage.user_data.user_profile.gender
+	else:
+		features["GENDER"] = "Other"  # Default value
+	
+	# AGE - Use user profile data
+	if DataStorage.user_data.has("user_profile") and DataStorage.user_data.user_profile.has("age"):
+		features["AGE"] = float(DataStorage.user_data.user_profile.age)
+	else:
+		features["AGE"] = 30.0  # Default value
+	
+	print("Extracted features based on wellbeing model: ", features)
+	return features

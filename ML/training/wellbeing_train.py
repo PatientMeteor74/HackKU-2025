@@ -9,7 +9,7 @@ from sklearn.preprocessing import StandardScaler, OneHotEncoder, MinMaxScaler
 from sklearn.compose import ColumnTransformer
 from sklearn.pipeline import Pipeline
 
-path = "/home/johnplatkowski/Documents/Projects/HackKU-2025/ML/data/"
+path = "C:/Users/johnj/Documents/HackKU-2025/ML/data/" 
 
 # Load data
 df = pd.read_csv(path + "Wellbeing_and_lifestyle_data_Kaggle.csv")
