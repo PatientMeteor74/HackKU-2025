@@ -1,6 +1,6 @@
-[gd_scene load_steps=2 format=3]
+[gd_scene load_steps=2 format=3 uid="uid://bbj4ef3bgmdot"]
 
-[ext_resource type="Script" path="res://UI/survey.gd" id="1_uvt5f"]
+[ext_resource type="Script" uid="uid://b7bhsquu1v5r4" path="res://UI/survey.gd" id="1_uvt5f"]
 
 [node name="Survey" type="Node2D"]
 script = ExtResource("1_uvt5f")
@@ -8,13 +8,12 @@ script = ExtResource("1_uvt5f")
 [node name="CanvasLayer" type="CanvasLayer" parent="."]
 
 [node name="SurveyContainer" type="VBoxContainer" parent="CanvasLayer"]
-anchors_preset = 15
+anchors_preset = -1
+anchor_top = 0.109
 anchor_right = 1.0
-anchor_bottom = 1.0
-offset_left = 20.0
-offset_top = 20.0
-offset_right = 340.0
-offset_bottom = 620.0
+anchor_bottom = 0.889
+offset_top = 0.239998
+offset_bottom = 0.039978
 grow_horizontal = 2
 grow_vertical = 2
 
@@ -32,4 +31,4 @@ theme_override_constants/separation = 10
 [node name="SubmitButton" type="Button" parent="CanvasLayer/SurveyContainer"]
 layout_mode = 2
 size_flags_horizontal = 4
-text = "Submit" 
+text = "Submit"

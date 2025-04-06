@@ -1,35 +1,23 @@
-[gd_scene load_steps=2 format=3]
+[gd_scene load_steps=2 format=3 uid="uid://bjhgyt5jclnbm"]
 
-[ext_resource type="Script" path="res://UI/activity_list.gd" id="1_cxqys"]
+[ext_resource type="Script" uid="uid://cvseryfedmwni" path="res://UI/activity_list.gd" id="1_d1h6o"]
 
 [node name="ActivityList" type="Node2D"]
-script = ExtResource("1_cxqys")
+script = ExtResource("1_d1h6o")
 
 [node name="CanvasLayer" type="CanvasLayer" parent="."]
 
-[node name="ActivityContainer" type="VBoxContainer" parent="CanvasLayer"]
+[node name="ActivitiesContainer" type="VBoxContainer" parent="CanvasLayer"]
 anchors_preset = 15
 anchor_right = 1.0
 anchor_bottom = 1.0
-offset_left = 20.0
-offset_top = 20.0
-offset_right = 340.0
-offset_bottom = 620.0
+offset_top = 70.0
+offset_bottom = -71.0
 grow_horizontal = 2
 grow_vertical = 2
 
-[node name="TitleLabel" type="Label" parent="CanvasLayer/ActivityContainer"]
+[node name="TitleLabel" type="Label" parent="CanvasLayer/ActivitiesContainer"]
 layout_mode = 2
 theme_override_font_sizes/font_size = 18
-text = "Daily Activities"
+text = "Activities"
 horizontal_alignment = 1
-
-[node name="ActivitiesList" type="VBoxContainer" parent="CanvasLayer/ActivityContainer"]
-layout_mode = 2
-size_flags_vertical = 3
-theme_override_constants/separation = 10
-
-[node name="AddActivityButton" type="Button" parent="CanvasLayer/ActivityContainer"]
-layout_mode = 2
-size_flags_horizontal = 4
-text = "Add Activity" 
